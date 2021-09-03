@@ -6,81 +6,76 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>TESLA</title>
     <link rel="stylesheet" href="../css/index.css">
-    <style>
-        @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@500;600&display=swap');
-        </style>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600&display=swap" rel="stylesheet">
 </head>
 <body>
-    <nav class="nav">
+    <header>
+        <nav class="nav">
 
-        <h1 class="nav__title">TESLA</h1>
+            <h1 class="nav__title">TESLA</h1>
+    
+            <ul class="nav__menu">
+                <li class="nav__item"><a href="#">Model S</a></li>
+                <li class="nav__item"><a href="#">Model 3</a></li>
+                <li class="nav__item"><a href="#">Model X</a></li>
+                <li class="nav__item"><a href="#">Model Y</a></li>
+                <li class="nav__item"><a href="#">Cybertruck</a></li>
+                <li class="nav__item"><a href="#">Solar Energy</a></li>
+            </ul>
+    
+        </nav>
 
-        <ul class="nav__menu">
-            <li class="nav__item"><a href="#">Model S</a></li>
-            <li class="nav__item"><a href="#">Model 3</a></li>
-            <li class="nav__item"><a href="#">Model X</a></li>
-            <li class="nav__item"><a href="#">Model Y</a></li>
-            <li class="nav__item"><a href="#">Cybertruck</a></li>
-            <li class="nav__item"><a href="#">Solar Energy</a></li>
-        </ul>
-
-    </nav>
-
-    <main class="main">
-
-        <div class="main__first">
-            <div class="main__first__div">
+        <section class="billboard">
+            <div class="billboard__div">
                 <h2>Model S</h2>
                 <input type="button" value="ORDER NOW">
             </div>
-        </div>
+        </section>
+    </header>
+    
 
-        <div class="main__second">
-            <div class="main__second_div">
+    <main class="main">
+
+        <section class="first">
+            <div class="first_div">
                 <h2>Cybertruck</h2>
                 <p>Better utility than a car with more performance than a sports car</p>
             </div>
             
-            
-
             <div>
                 <input type="button" value="ORDER NOW">
                 <input type="button" value="LEARN MORE">
             </div>
 
-        </div>
+        </section>
 
-        <div class="main__third">
-            <div class="main__third_div">
+        <section class="second">
+            <div class="second_div">
                 <h2>Solar Energy</h2>
                 <p>Consume clean energy in your home. Discover new alternatives</p>
             </div>
             
+            <input type="button" value="LEARN MORE">
 
-            <div>
-                <input type="button" value="LEARN MORE">
-            </div>
+        </section>
 
-        </div>
-
-        <div class="main__fourth">
+        <section class="third">
             
-            
-            <figure class="main__fourth__figure">
+            <figure class="third__figure">
                 <img src="../resources/accesories.jpg" alt="">
             </figure>
 
-            <aside>
-                <div class="main__fourth_div">
+            <div class="third__content">
+                <div class="third__content-div">
                     <h2>Accesories</h2>
                     <p>Cloting, lifestyle and some other stuff for you</p>
                 </div>
 
-                <div>
-                    <input type="button" value="SHOP NOW">
-                </div>
-            </aside>
-        </div>
+                <input type="button" value="SHOP NOW">
+            </div>
+        </section>
 
     </main>
 

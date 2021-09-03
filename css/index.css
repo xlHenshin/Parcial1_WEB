@@ -2,6 +2,23 @@
     font-family: 'Poppins', sans-serif;
     margin: 0;
     padding: 0;
+    box-sizing: border-box;
+}
+
+h1{
+    margin-left: 20px;
+    font-size: 28px;
+    font-weight: 600;
+}
+
+h2{
+    font-size: 52px;
+    font-weight: 600;
+}
+
+p{
+    font-size: 16px;
+    font-weight: 400;
 }
 
 .nav{
@@ -10,11 +27,8 @@
     display: flex;
     flex-direction: row;
     align-items: center;
+    justify-content: center;
     
-}
-
-.nav h1{
-    margin-left: 20px;
 }
 
 .nav__menu{
@@ -32,22 +46,22 @@
 
 .nav__item{
     font-size: 14px;
-    font-weight: 500px;
+    font-weight: 500;
     margin: 0 10px;
 }
 
-.main__first{
+.billboard{
     width: 100%;
     height: 829px;
     background-image: url(../resources/models.jpg);
-    background-size: cover;
+    background-size:cover;
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
 }
 
-.main__first__div{
+.billboard__div{
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -56,12 +70,7 @@
     margin-bottom: 550px;
 }
 
-.main__first__div h2{
-    font-size: 52px;
-    font-weight: 600;
-}
-
-.main__second{
+.first{
     width: 100%;
     height: 829px;
     background-image: url(../resources/cybertruck.jpg);
@@ -72,26 +81,16 @@
     justify-content: center;
 }
 
-.main__second_div{
+.first_div{
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
     color: white;
-    margin-bottom: 500px;
+    padding-bottom: 500px;
 }
 
-.main__second_div h2{
-    font-size: 52px;
-    font-weight: 600px;
-}
-
-.main__second_div p{
-    font-size: 16px;
-    font-weight: 500;
-}
-
-.main__third{
+.second{
     width: 100%;
     height: 802px;
     background-image: url(../resources/solarenergy.jpg);
@@ -102,32 +101,43 @@
     justify-content: center;
 }
 
-.main__third_div{
+.second_div{
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
     color: white;
-    margin-bottom: 500px;
+    padding-bottom: 500px;
 }
 
-.main__third_div h2{
-    font-size: 52px;
-    font-weight: 600px;
-}
-
-.main__third_div p{
-    font-size: 16px;
-    font-weight: 500;
-}
-
-.main__fourth{
+.third{
     background: #F8F8F8;
     display: flex;
     align-items: center;
     justify-content: center;
 }
 
+.third__figure{
+    width: 50%;
+    height: 399.5px;
+}
+
+.third__figure img{
+    width: 100%;
+}
+
+.third__content{
+    width: 50%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.third__content-div{
+    text-align: center;
+    padding-bottom: 50px;
+}
 
 .footer{
     background: black;
