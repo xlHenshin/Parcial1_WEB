@@ -1,0 +1,173 @@
+*{
+    font-family: 'Poppins', sans-serif;
+    margin: 0;
+    padding: 0;
+}
+
+.nav{
+    width: 100%;
+    height: 80px;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    
+}
+
+.nav h1{
+    margin-left: 20px;
+}
+
+.nav__menu{
+    width: 90%;
+    display: flex;
+    flex-direction: row;
+    justify-content:flex-end;
+    list-style: none;
+}
+
+.nav__menu a{
+    color:black;
+    text-decoration: none;
+}
+
+.nav__item{
+    font-size: 14px;
+    font-weight: 500px;
+    margin: 0 10px;
+}
+
+.main__first{
+    width: 100%;
+    height: 829px;
+    background-image: url(../resources/models.jpg);
+    background-size: cover;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.main__first__div{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    margin-bottom: 550px;
+}
+
+.main__first__div h2{
+    font-size: 52px;
+    font-weight: 600;
+}
+
+.main__second{
+    width: 100%;
+    height: 829px;
+    background-image: url(../resources/cybertruck.jpg);
+    background-size: cover;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.main__second_div{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    margin-bottom: 500px;
+}
+
+.main__second_div h2{
+    font-size: 52px;
+    font-weight: 600px;
+}
+
+.main__second_div p{
+    font-size: 16px;
+    font-weight: 500;
+}
+
+.main__third{
+    width: 100%;
+    height: 802px;
+    background-image: url(../resources/solarenergy.jpg);
+    background-size: cover;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.main__third_div{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    margin-bottom: 500px;
+}
+
+.main__third_div h2{
+    font-size: 52px;
+    font-weight: 600px;
+}
+
+.main__third_div p{
+    font-size: 16px;
+    font-weight: 500;
+}
+
+.main__fourth{
+    background: #F8F8F8;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+
+.footer{
+    background: black;
+    padding: 40px;
+    font-size: 14px;
+    
+}
+
+.footer__contact{
+    
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.footer__button{
+    width: 10%;
+}
+
+.footer__links{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.footer__menu{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    list-style: none;
+    padding: 20px;
+}
+
+.footer__menu a{
+    color: #FFFFFF;
+    text-decoration: none;
+}
+
+.footer__item{
+    margin: 0 10px;
+}
