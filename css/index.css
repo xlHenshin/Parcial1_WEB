@@ -1,8 +1,11 @@
 *{
-    font-family: 'Poppins', sans-serif;
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+}
+
+body{
+    font-family: 'Poppins', sans-serif;
 }
 
 h1{
@@ -12,19 +15,75 @@ h1{
 }
 
 h2{
-    font-size: 52px;
+    font-size: 3.25em;
     font-weight: 600;
 }
 
 p{
-    font-size: 16px;
+    font-size: 1em;
     font-weight: 400;
+}
+
+.item__text{
+    font-size: 1em;
+    font-weight: 500;
+}
+
+.button{
+    text-decoration: none;
+    color: white;
+    border: solid 0.2em;
+    padding: 0.3em;
+    padding-left: 2em;
+    padding-right: 2em;
+    font-weight: 500;
+    border-radius: 3.75em;
+}
+
+.button2{
+    text-decoration: none;
+    background: white;
+    padding: 0.5em;
+    padding-left: 2em;
+    padding-right: 2em;
+    border-radius: 3.75em;
+}
+
+.button__span{
+    font-weight: 500;
+    color: black;
+}
+
+.button3{
+    text-decoration: none;
+    background: black;
+    padding: 0.5em;
+    padding-left: 5em;
+    padding-right: 5em;
+    border-radius: 3.75em;
+}
+
+.button3__span{
+    font-weight: 500;
+    color: white;
+}
+
+.button{
+    text-decoration: none;
+    color: white;
+    border: solid 0.2em;
+    padding: 0.3em;
+    padding-left: 2em;
+    padding-right: 2em;
+    font-weight: 500;
+    border-radius: 3.75em;
 }
 
 .nav{
     width: 100%;
-    height: 80px;
+    height: 5em;
     display: flex;
+    position: absolute;
     flex-direction: row;
     align-items: center;
     justify-content: center;
@@ -45,70 +104,96 @@ p{
 }
 
 .nav__item{
-    font-size: 14px;
+    font-size: 0.875em;
     font-weight: 500;
     margin: 0 10px;
 }
 
 .billboard{
     width: 100%;
-    height: 829px;
-    background-image: url(../resources/models.jpg);
-    background-size:cover;
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
 }
 
-.billboard__div{
+.billboard img{
+    width: 100%;
+}
+
+.billboard__absolute{
+    position: absolute;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    height: 70%;
+    
+}
+
+.billboard__content{
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
     color: white;
-    margin-bottom: 550px;
 }
 
 .first{
     width: 100%;
-    height: 829px;
-    background-image: url(../resources/cybertruck.jpg);
-    background-size: cover;
+    height: 100%;
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
 }
 
-.first_div{
+.first img{
+    width: 100%;
+}
+
+.first__absolute{
+    position: absolute;
     display: flex;
     flex-direction: column;
     align-items: center;
-    justify-content: center;
+    justify-content: space-between;
+    height: 80%;
+}
+
+.first__content{
+    
     color: white;
-    padding-bottom: 500px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
 }
 
 .second{
     width: 100%;
-    height: 802px;
-    background-image: url(../resources/solarenergy.jpg);
-    background-size: cover;
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
 }
 
-.second_div{
+.second img{
+    width: 100%;
+}
+
+.second__absolute{
+    position: absolute;
     display: flex;
     flex-direction: column;
     align-items: center;
-    justify-content: center;
-    color: white;
-    padding-bottom: 500px;
+    justify-content: space-between;
+    height: 80%;
 }
+
+.second__content{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    color: white;}
 
 .third{
     background: #F8F8F8;
@@ -119,11 +204,7 @@ p{
 
 .third__figure{
     width: 50%;
-    height: 399.5px;
-}
-
-.third__figure img{
-    width: 100%;
+    
 }
 
 .third__content{
@@ -142,7 +223,7 @@ p{
 .footer{
     background: black;
     padding: 40px;
-    font-size: 14px;
+    font-size: 0.875em;
     
 }
 
