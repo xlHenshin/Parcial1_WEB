@@ -4,6 +4,31 @@
     box-sizing: border-box;
 }
 
+.swiper{
+    height: 500px;
+    width: 600px;
+}
+
+.swiper-slide {
+    text-align: center;
+    font-size: 18px;
+    background: #fff;
+
+    /* Center slide text vertically */
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: -webkit-flex;
+    display: flex;
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
+    -webkit-justify-content: center;
+    justify-content: center;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    -webkit-align-items: center;
+    align-items: center;
+  }
+
 body{
     font-family: 'Poppins', sans-serif;
 }
@@ -109,7 +134,7 @@ p{
     margin: 0 0.625em;
 }
 
-.billboard{
+.carousel{
     width: 100%;
     display: flex;
     flex-direction: column;
@@ -117,11 +142,11 @@ p{
     justify-content: center;
 }
 
-.billboard img{
+.carousel img{
     width: 100%;
 }
 
-.billboard__absolute{
+.carousel__absolute{
     position: absolute;
     display: flex;
     flex-direction: column;
@@ -130,7 +155,7 @@ p{
     
 }
 
-.billboard__content{
+.carousel__content{
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -233,7 +258,7 @@ p{
     align-items: flex-start;
 }
 
-.pform{
+.form__paragraph{
     font-size: 1em;
     font-weight: 500;
     color: #717171;
@@ -244,25 +269,32 @@ p{
 .modelinput{
     border: none;
     background: #ECECEC;
-    padding: 0.75em;
-    padding-left: 10em;
-    padding-right: 10em;
+    height: 2.75em;
+    padding: 1.25em;
     border-radius: 3.75em;
 }
 
 .textinput{
     border: none;
+    width: 15em;
+    height: 2.75em;
+    padding-left: 1.25em;
     background: #ECECEC;
-    padding: 0.75em;
-    padding-left: 2em;
-    padding-right: 2em;
+    
     border-radius: 3.75em;
 }
 
 .textarea{
     border: none;
     background: #ECECEC;
-    border-radius: 1em
+    border-radius: 1em;
+    padding-left: 1.25em;
+    padding-right: 1.25em;
+    padding-top: 1em;
+    padding-bottom: 1em;
+    width: 30em;
+    height: 11em;
+    
 }
 
 .formbutton{
@@ -276,17 +308,50 @@ p{
 
 .form__item{
     height: 100%;
-    padding-bottom: 2em;
+    margin-bottom:  2em;
+    margin-right: 2em;
 }
 
-.form__firstcolumn{
+.select__country{
+    background: #ECECEC;
+    border: none;
+    width: 15em;
+    height: 2.75em;
+    border-radius: 3.75em;
+    padding-left: 1.25em;
+    padding-right: 1.25em;
 }
 
-.form__secondcolumn{
+.select__contact{
+    background: #ECECEC;
+    border: none;
+    width: 15em;
+    height: 2.75em;
+    border-radius: 3.75em;
+    padding-left: 1.25em;
+    padding-right: 1.25em;
 }
 
-.form__thirdcolumn{
+.select__model{
+    background: #ECECEC;
+    border: none;
+    width: 30em;
+    height: 2.75em;
+    border-radius: 3.75em;
+    padding-left: 1.25em;
+    padding-right: 1.25em;
 }
+
+input[type="submit"]{
+    
+    background: #3E6AE1;
+    padding: 0.5em;
+    padding-left: 5em;
+    padding-right: 5em;
+    border-radius: 3.75em;
+}
+
+
 
 .footer{
     background: black;
