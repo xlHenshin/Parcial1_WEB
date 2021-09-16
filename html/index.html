@@ -9,12 +9,14 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="../css/index.css">
     <link rel="stylesheet" href="https://unpkg.com/swiper@7/swiper-bundle.min.css" />
+
+    <link rel="stylesheet" href="../css/index.css">
+    <link rel="stylesheet" href="../css/mobile.css">
 </head>
 
 <body>
-    <header>
+    <header class="principal">
         <nav class="nav">
 
             <h1 class="nav__title">TESLA</h1>
@@ -44,30 +46,53 @@
             </ul>
 
         </nav>
-
-        <section class="carousel">
-            <div class="carousel__absolute">
-                <div class="carousel__content">
-                    <h2>Model S</h2>
-                    <a href="#" class="button">ORDER NOW</a>
+        
+        <div class="swiper mySwiper">
+            <div class="swiper-wrapper">
+              <div class="swiper-slide">
+                <div class="carousel__absolute">
+                    <div class="carousel__content">
+                        <h2 class="carousel__title">Model S</h2>
+                        <a href="#" class="carousel__button">ORDER NOW</a>
+                    </div>
                 </div>
+                <img src="../resources/ModelS.jfif" alt="ModelS">
+              </div>
+              <div class="swiper-slide">
+                <div class="carousel__absolute">
+                    <div class="carousel__content">
+                        <h2 class="carousel__title">Model 3</h2>
+                        <a href="#" class="carousel__button">ORDER NOW</a>
+                    </div>
+                </div>
+                <img src="../resources/Model3.jfif" alt="Model3">
+              </div>
+              <div class="swiper-slide">
+                <div class="carousel__absolute">
+                    <div class="carousel__content">
+                        <h2 class="carousel__title">Model X</h2>
+                        <a href="#" class="carousel__button">ORDER NOW</a>
+                    </div>
+                </div>
+                <img src="../resources/ModelX.jfif" alt="ModelX">
+              </div>
+              <div class="swiper-slide">
+                <div class="carousel__absolute">
+                    <div class="carousel__content">
+                        <h2 class="carousel__title">Model Y</h2>
+                        <a href="#" class="carousel__button">ORDER NOW</a>
+                    </div>
+                </div>
+                <img src="../resources/ModelY.jfif" alt="ModelY">
+              </div>
             </div>
-            <img src="../resources/models.jpg" alt="ModelS">
-        </section>
-
-
+            <div class="swiper-button-next"></div>
+            <div class="swiper-button-prev"></div>
+            <div class="swiper-pagination"></div>
+          </div>
 
     </header>
-    <div class="swiper mySwiper">
-        <div class="swiper-wrapper">
-          <div class="swiper-slide">Slide 1</div>
-          <div class="swiper-slide">Slide 2</div>
-          <div class="swiper-slide">Slide 3</div>
-        </div>
-        <div class="swiper-button-next"></div>
-        <div class="swiper-button-prev"></div>
-        <div class="swiper-pagination"></div>
-      </div>
+    
 
     <main class="main">
 
@@ -88,7 +113,7 @@
             </div>
 
 
-            <img src="../resources/cybertruck.jpg" alt="Cybertruck">
+            <img src="../resources/02_Desktop.jpg" alt="Cybertruck">
 
         </section>
 
