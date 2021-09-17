@@ -9,7 +9,7 @@ body{
 }
 
 h1{
-    margin-left: 1.25em;
+    margin-left: 20px;
     font-size: 1.75em;
     font-weight: 600;
 }
@@ -38,32 +38,32 @@ p{
 .carousel__button{
     text-decoration: none;
     color: black;
-    border: solid 0.2em;
-    padding: 0.3em;
-    padding-left: 2em;
-    padding-right: 2em;
+    border: solid 3.2px;
+    padding: 4.8px;
+    padding-left: 32px;
+    padding-right: 32px;
     font-weight: 500;
-    border-radius: 3.75em;
+    border-radius: 60px;
 }
 
 .button{
     text-decoration: none;
     color: white;
-    border: solid 0.2em;
-    padding: 0.3em;
-    padding-left: 2em;
-    padding-right: 2em;
+    border: solid 3.2px;
+    padding: 4.8px;
+    padding-left: 32px;
+    padding-right: 32px;
     font-weight: 500;
-    border-radius: 3.75em;
+    border-radius: 60px;
 }
 
 .button2{
     text-decoration: none;
     background: white;
-    padding: 0.5em;
-    padding-left: 2em;
-    padding-right: 2em;
-    border-radius: 3.75em;
+    padding: 8px;
+    padding-left: 32px;
+    padding-right: 32px;
+    border-radius: 60px;
 }
 
 .button__span{
@@ -74,10 +74,10 @@ p{
 .button3{
     text-decoration: none;
     background: black;
-    padding: 0.5em;
-    padding-left: 5em;
-    padding-right: 5em;
-    border-radius: 3.75em;
+    padding: 8px;
+    padding-left: 80px;
+    padding-right: 80px;
+    border-radius: 60px;
 }
 
 .button3__span{
@@ -88,21 +88,22 @@ p{
 .button{
     text-decoration: none;
     color: white;
-    border: solid 0.2em;
-    padding: 0.3em;
-    padding-left: 2em;
-    padding-right: 2em;
+    border: solid 3.2px;
+    padding: 4.8px;
+    padding-left: 32px;
+    padding-right: 32px;
     font-weight: 500;
-    border-radius: 3.75em;
+    border-radius: 60px;
 }
 
 .principal{
     position: relative;
+    width: 100%;
 }
 
-.nav{
+.navigation{
     width: 100%;
-    height: 5em;
+    height: 80px;
     display: flex;
     position: absolute;
     flex-direction: row;
@@ -111,7 +112,7 @@ p{
     z-index: 1000;
 }
 
-.nav__menu{
+.menu{
     width: 90%;
     display: flex;
     flex-direction: row;
@@ -119,15 +120,15 @@ p{
     list-style: none;
 }
 
-.nav__menu a{
+.menu a{
     color:black;
     text-decoration: none;
 }
 
-.nav__item{
-    font-size: 0.875em;
+.menu__item{
+    font-size: 14px;
     font-weight: 500;
-    margin: 0 0.625em;
+    margin: 0 10px;
 }
 
 .swiper{
@@ -240,12 +241,12 @@ p{
 
 .third__content-div{
     text-align: center;
-    padding-bottom: 3.125em;
+    padding-bottom: 50px;
 }
 
 .fourth{
-    padding-top: 5em;
-    padding-bottom: 5em;
+    padding-top: 80px;
+    padding-bottom: 80px;
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -254,94 +255,94 @@ p{
 
 .form{
     width: 60%;
-    padding: 5em;
+    padding: 80px;
     display: flex;
     justify-content: space-around;
     align-items: flex-start;
 }
 
 .form__paragraph{
-    font-size: 1em;
+    font-size: 16px;
     font-weight: 500;
     color: #717171;
-    padding-bottom: 1em;
-    padding-left: 1em;
+    padding-bottom: 16px;
+    padding-left: 16px;
 }
 
 .modelinput{
     border: none;
     background: #ECECEC;
-    height: 2.75em;
-    padding: 1.25em;
-    border-radius: 3.75em;
+    height: 44px;
+    padding: 20px;
+    border-radius: 60px;
 }
 
 .textinput{
     border: none;
-    width: 15em;
-    height: 2.75em;
-    padding-left: 1.25em;
-    padding-right: 1.25em;
+    width: 240px;
+    height: 44px;
+    padding-left: 20px;
+    padding-right: 20px;
     background: #ECECEC;
-    border-radius: 3.75em;
+    border-radius: 60px;
 }
 
 .textarea{
     border: none;
     background: #ECECEC;
-    border-radius: 1em;
-    padding-left: 1.25em;
-    padding-right: 1.25em;
-    padding-top: 1em;
-    padding-bottom: 1em;
-    width: 30em;
-    height: 11em;
+    border-radius: 16px;
+    padding-left: 20px;
+    padding-right: 20px;
+    padding-top: 16px;
+    padding-bottom: 16px;
+    width: 480px;
+    height: 158px;
     
 }
 
 .formbutton{
     text-decoration: none;
     background: #3E6AE1;
-    padding: 0.5em;
-    padding-left: 5em;
-    padding-right: 5em;
-    border-radius: 3.75em;
+    padding: 8px;
+    padding-left: 80px;
+    padding-right: 80px;
+    border-radius: 60px;
 }
 
 .form__item{
     height: 100%;
-    margin-bottom:  2em;
-    margin-right: 2em;
+    margin-bottom:  32px;
+    margin-right: 32px;
 }
 
 .select__country{
     background: #ECECEC;
     border: none;
-    width: 15em;
-    height: 2.75em;
-    border-radius: 3.75em;
-    padding-left: 1.25em;
-    padding-right: 1.25em;
+    width: 240px;
+    height:44px;
+    border-radius: 60px;
+    padding-left: 20px;
+    padding-right: 20px;
 }
 
 .select__contact{
     background: #ECECEC;
     border: none;
-    width: 15em;
-    height: 2.75em;
-    border-radius: 3.75em;
-    padding-left: 1.25em;
-    padding-right: 1.25em;
+    width: 240px;
+    height: 44px;
+    border-radius: 60px;
+    padding-left: 20px;
+    padding-right: 20px;
 }
 
 .select__model{
     background: #ECECEC;
     border: none;
-    width: 30em;
-    height: 2.75em;
-    border-radius: 3.75em;
-    padding-left: 1.25em;
-    padding-right: 1.25em;
+    width: 480px;
+    height: 44px;
+    border-radius: 60px;
+    padding-left: 20px;
+    padding-right: 20px;
 }
 
 input[type="submit"]{
@@ -351,10 +352,10 @@ input[type="submit"]{
     color: white;
     text-decoration: none;
     cursor: pointer;
-    padding: 0.75em;
-    padding-left: 5em;
-    padding-right: 5em;
-    border-radius: 3.75em;
+    padding:12px;
+    padding-left: 80px;
+    padding-right: 80px;
+    border-radius: 60px;
     font-weight: 600;
 }
 
@@ -362,12 +363,12 @@ input[type="submit"]{
 
 .footer{
     background: black;
-    padding: 2em;
+    padding: 32px;
     font-size: 0.875em; 
 }
 
 .footer__contact{
-    margin-top: 1em;
+    margin-top: 16px;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -379,7 +380,7 @@ input[type="submit"]{
     align-items: center;
     justify-content: center;
     list-style: none;
-    margin:1.25em;
+    margin: 20px;
 }
 
 .footer__menu a{
@@ -395,9 +396,5 @@ input[type="submit"]{
 }
 
 .footer__item{
-    margin: 0 0.625em;
-}
-
-@media all and (max-width: 500px){
-
+    margin: 0 10px;
 }

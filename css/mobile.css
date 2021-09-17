@@ -1,5 +1,13 @@
-@media all and (max-width: 768px){
+@media all and (max-width: 1600px){
      .swiper {
-         height: 400px;
+         height: 900px;
      }
+
+
+}
+
+@media all and (max-width: 1440px){
+    .swiper {
+        height: 800px;
+    }
 }
