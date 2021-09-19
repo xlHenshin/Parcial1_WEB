@@ -1,17 +1,11 @@
-@media all and (max-width:1400px){
-    .navigation {
-        flex-direction: column;
-    }
-
-    .menu {
-        justify-content: center;
-    }
-}
-
 @media all and (max-width: 1200px) {
     .form {
         width: 80%;
         flex-wrap: wrap;
+    }
+
+    .accesories__content{
+        font-size: .8em;
     }
 }
 
@@ -25,21 +19,57 @@
         display: none;
     }
 
-    .first__absolute {
-        font-size: .8em;
+    .button{
+        border: solid 2.2px;
+        padding-top: 6px;
+        padding-bottom: 6px;
+    }
+    
+    .button3{
+        padding: 8px;
+        padding-left: 80px;
+        padding-right: 80px;
+        border-radius: 60px;
     }
 
-    .first__content {
-        margin-bottom: 20%;
+    .carousel__absolute{
+        font-size: .6em;
+        top: 80px;
     }
 
-    .third {
-        flex-direction: column-reverse;
-        padding-top: 50px;
+    .carousel__button{
+        border: solid 2.2px;
+        padding: 3px;
+        padding-left: 16px;
+        padding-right: 16px;
+        border-radius: 60px;
+    }
+
+    .frame{
+        height: 400px;
+    }
+
+    .frame__absolute {
+        font-size: .6em;
+        top: 50px;
+    }
+
+    .frame__content {
+        margin-bottom: 65%;
+    }
+
+    .accesories__content{
+        font-size: .6em;
+    }
+
+    .order{
+        font-size: .6em;
+        padding-top: 40px;
+        padding-bottom: 40px;
     }
 
     .form {
-        width: 95%;
+        width: 80%;
         padding: 10px;
     }
 
@@ -51,25 +81,79 @@
         width: 100%;
     }
 
-    .footer__menu {
-        flex-direction: column;
+    .footer{
+        font-size: 0.7em; 
     }
-
 }
 
 @media all and (max-width: 560px){
 
-    .first {
+    .swiper {
+        height: 400px;
+    }
+
+    .carousel__absolute{
+        font-size: .5em;
+        top: 70px;
+    }
+
+    .carousel__button{
+        border: solid 2px;
+    }
+
+    .frame {
         height: 350px;
     }
 
-    .first img {
-        height: 100%;
+    .frame__absolute {
+        top: 50px;
+        font-size: .5em;
     }
 
-    .first__absolute {
-        top: 10px;
-        width: 90%;
+    .frame__content {
+        margin-bottom: 70%;
+    }
+
+    .accesories{
+        flex-direction: column-reverse;
+    }
+
+    .accesories__content{
+        padding-top: 40px;
+        font-size: .5em;
+    }
+
+    .accesories__content-div{
+        padding-bottom: 25px;
+    }
+
+    .order{
+        font-size: .5em;
+        padding-top: 40px;
+        padding-bottom: 40px;
+    }
+
+    .form {
+        width: 80%;
+        padding: 10px;
+    }
+
+    .form > div {
+        width: 100%;
+    }
+
+    .form .textinput, .form select, .form textarea {
+        width: 100%;
+    }
+
+    .footer{
+        font-size: 0.5em; 
+        padding: 16px;
+    }
+
+    .footer__menu {
+        flex-direction: column;
+        margin: 10px;
     }
 
 }

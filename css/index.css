@@ -142,7 +142,7 @@ p{
     display: flex;
     flex-direction: column;
     align-items: center;
-    height: 65%;
+    top: 150px;
     
 }
 
@@ -158,20 +158,22 @@ main > section {
     overflow: hidden;
 }
 
-.first{
+.frame{
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
     position: relative;
+    height: 800px;
 }
 
-.first img{
+.frame img{
     width: 100%;
+    height: 100%;
     object-fit: cover;
 }
 
-.first__absolute{
+.frame__absolute{
     position: absolute;
     display: flex;
     flex-direction: column;
@@ -180,59 +182,30 @@ main > section {
     top: 100px;
 }
 
-.first__content{
+.frame__content{
     
     color: white;
     display: flex;
     flex-direction: column;
     align-items: center;
-    margin-bottom: 200px;
+    margin-bottom: 80%;
 }
 
-.second{
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-}
-
-.second img{
-    width: 100%;
-    object-fit: cover;
-}
-
-.second__absolute{
-    position: absolute;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: space-between;
-    height: 80%;
-}
-
-.second__content{
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    color: white;}
-
-.third{
+.accesories{
     background: #F8F8F8;
     display: flex;
     align-items: center;
     justify-content: center;
 }
 
-.third__figure{
+.accesories__figure{
+    margin-top: 30px;
     width: 50%;
-}
-
-.third__figure img{
-    width: 100%;
+    height: 100%;
     object-fit: cover;
 }
 
-.third__content{
+.accesories__content{
     width: 50%;
     display: flex;
     flex-direction: column;
@@ -240,12 +213,12 @@ main > section {
     justify-content: center;
 }
 
-.third__content-div{
+.accesories__content-div{
     text-align: center;
     padding-bottom: 50px;
 }
 
-.fourth{
+.order{
     padding-top: 80px;
     padding-bottom: 80px;
     display: flex;
@@ -263,7 +236,7 @@ main > section {
 }
 
 .form__paragraph{
-    font-size: 16px;
+    font-size: 1em;
     font-weight: 500;
     color: #717171;
     padding-bottom: 16px;
@@ -359,8 +332,6 @@ input[type="submit"]{
     border-radius: 60px;
     font-weight: 600;
 }
-
-
 
 .footer{
     background: black;
