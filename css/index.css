@@ -6,12 +6,12 @@
 
 body{
     font-family: 'Poppins', sans-serif;
+    overflow-x: hidden;
 }
 
-h1{
+.web__logo{
     margin-left: 20px;
-    font-size: 1.75em;
-    font-weight: 600;
+    width: 125px
 }
 
 h2{
@@ -85,19 +85,7 @@ p{
     color: white;
 }
 
-.button{
-    text-decoration: none;
-    color: white;
-    border: solid 3.2px;
-    padding: 4.8px;
-    padding-left: 32px;
-    padding-right: 32px;
-    font-weight: 500;
-    border-radius: 60px;
-}
-
 .principal{
-    position: relative;
     width: 100%;
 }
 
@@ -113,11 +101,12 @@ p{
 }
 
 .menu{
-    width: 90%;
+    width: 100%;
     display: flex;
     flex-direction: row;
     justify-content:flex-end;
     list-style: none;
+    margin-right: 20px;
 }
 
 .menu a{
@@ -132,7 +121,7 @@ p{
 }
 
 .swiper{
-    height: 1000px;
+    height: 900px;
 }
 
 .swiper-slide {
@@ -144,6 +133,7 @@ p{
 
 .swiper-slide img{
     width: 100%;
+    height: 100%;
     object-fit: cover;
 }
 
@@ -164,11 +154,16 @@ p{
     color: white;
 }
 
+main > section {
+    overflow: hidden;
+}
+
 .first{
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
+    position: relative;
 }
 
 .first img{
@@ -182,7 +177,7 @@ p{
     flex-direction: column;
     align-items: center;
     justify-content: space-between;
-    height: 80%;
+    top: 100px;
 }
 
 .first__content{
@@ -191,6 +186,7 @@ p{
     display: flex;
     flex-direction: column;
     align-items: center;
+    margin-bottom: 200px;
 }
 
 .second{
@@ -229,6 +225,11 @@ p{
 
 .third__figure{
     width: 50%;
+}
+
+.third__figure img{
+    width: 100%;
+    object-fit: cover;
 }
 
 .third__content{
