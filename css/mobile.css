@@ -1,4 +1,17 @@
 @media all and (max-width: 1200px) {
+
+    .navigation{
+        justify-content: space-between;
+    }
+
+    .menu__action{
+        display: block;
+    }
+
+    .menu__container{
+        display: none;
+    }
+
     .form {
         width: 80%;
         flex-wrap: wrap;
@@ -9,14 +22,16 @@
     }
 }
 
+@media all and (min-width:1201px){
+    .menu__close{
+        display: none;
+    }
+}
+
 @media all and (max-width: 768px) {
 
     .swiper {
         height: 500px;
-    }
-
-    .navigation {
-        display: none;
     }
 
     .button{

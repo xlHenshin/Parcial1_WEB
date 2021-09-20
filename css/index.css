@@ -92,13 +92,60 @@ p{
 
 .navigation{
     width: 100%;
-    height: 80px;
     display: flex;
     position: absolute;
-    flex-direction: row;
     align-items: center;
     justify-content: center;
     z-index: 1000;
+}
+
+.menu__container{
+    display: flex;
+    width: 100%;
+}
+
+.menu__container--mobile{
+    display: block !important;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: #FFF;
+    padding: 35px;
+}
+
+.menu__container--mobile .menu{
+    flex-direction: column;
+    align-items: flex-start;
+    font-size: 1.5em;
+}
+
+.menu__action{
+    display: none;
+    background-color: transparent;
+    border: none;
+    cursor: pointer;
+    margin-right: 20px;
+}
+
+.menu__action img{
+    width: 30px;
+}
+
+.menu__close{
+    position: absolute;
+    top: 0;
+    right: 0;
+    background-color: transparent;
+    border: none;
+    cursor: pointer;
+    margin-top: 20px;
+    margin-right: 20px;
+}
+
+.menu__close img{
+    width: 30px;
 }
 
 .menu{
