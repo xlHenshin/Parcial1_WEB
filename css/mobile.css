@@ -105,16 +105,16 @@
     }
 
     .frame {
-        height: 350px;
+        height: 300px;
     }
 
     .frame__absolute {
-        top: 50px;
+        top: 45px;
         font-size: .5em;
     }
 
     .frame__content {
-        margin-bottom: 70%;
+        margin-bottom: 60%;
     }
 
     .accesories{
@@ -169,4 +169,32 @@
         margin: 10px;
     }
 
+}
+
+@media all and (max-width: 375px){
+
+    .frame {
+        height: 260px;
+    }
+
+    .frame__absolute {
+        top: 25px;
+        font-size: .45em;
+    }
+
+    .frame__content {
+        margin-bottom: 60%;
+    }
+
+    .accesories__content{
+        font-size: .45em;
+    }
+
+    .order h2{
+        font-size: 1.463em;
+    }
+
+    .form{
+        font-size: 0.625em;
+    }
 }
