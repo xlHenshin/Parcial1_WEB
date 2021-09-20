@@ -30,6 +30,10 @@
 
 @media all and (max-width: 768px) {
 
+    .web__logo{
+        width: 100px
+    }
+
     .swiper {
         height: 500px;
     }
@@ -105,6 +109,10 @@
 }
 
 @media all and (max-width: 560px){
+
+    .web__logo{
+        width: 80px
+    }
 
     .swiper {
         height: 400px;
