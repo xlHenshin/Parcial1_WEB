@@ -24,12 +24,11 @@
         padding-top: 6px;
         padding-bottom: 6px;
     }
-    
+
     .button3{
         padding: 8px;
-        padding-left: 80px;
-        padding-right: 80px;
-        border-radius: 60px;
+        padding-left: 40px;
+        padding-right: 40px;
     }
 
     .carousel__absolute{
@@ -63,21 +62,25 @@
     }
 
     .order{
-        font-size: .6em;
         padding-top: 40px;
         padding-bottom: 40px;
+    }
+
+    .order h2{
+        font-size: 1.95em;
     }
 
     .form {
         width: 80%;
         padding: 10px;
+        font-size: 0.8em;
+    }
+
+    .form__item{
+        margin-bottom:  18px;
     }
 
     .form > div {
-        width: 100%;
-    }
-
-    .form .textinput, .form select, .form textarea {
         width: 100%;
     }
 
@@ -127,23 +130,33 @@
         padding-bottom: 25px;
     }
 
+    input[type="submit"]{
+
+        padding:12px;
+        padding-left: 40px;
+        padding-right: 40px;
+        font-size: .6em;
+    }
+
     .order{
-        font-size: .5em;
         padding-top: 40px;
         padding-bottom: 40px;
     }
 
-    .form {
-        width: 80%;
-        padding: 10px;
+    .order h2{
+        font-size: 1.625em;
     }
 
     .form > div {
         width: 100%;
     }
 
-    .form .textinput, .form select, .form textarea {
-        width: 100%;
+    .textinput{
+        height: 34px;
+    }
+
+    .form select{
+        height: 34px;
     }
 
     .footer{
