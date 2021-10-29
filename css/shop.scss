@@ -26,6 +26,7 @@ body{
     justify-content:space-between;
     margin-left: 30px;
     margin-right: 30px;
+    margin-bottom: 80px;
 }
 
 .product{
@@ -70,5 +71,50 @@ body{
     &__button{
         width: 100%;
         object-fit: contain;
+    }
+}
+
+.end{
+    background: black;
+    padding: 32px;
+    font-size: 0.875em; 
+}
+
+.footer{
+    &__contact{
+        margin-top: 16px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+    }
+    &__button{
+        text-decoration: none;
+        color: white;
+        border: solid 3.2px;
+        padding: 4.8px;
+        padding-left: 32px;
+        padding-right: 32px;
+        font-weight: 500;
+        border-radius: 60px;
+    }
+    &__menu{
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        list-style: none;
+    }
+    &__a{
+        color: #FFFFFF;
+        text-decoration: none;
+    }
+    &__item{
+        margin: 0 10px;
+    }
+    &__link{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
     }
 }

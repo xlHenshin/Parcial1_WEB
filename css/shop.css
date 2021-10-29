@@ -43,6 +43,7 @@ body {
           justify-content: space-between;
   margin-left: 30px;
   margin-right: 30px;
+  margin-bottom: 80px;
 }
 
 .product {
@@ -107,5 +108,77 @@ body {
   width: 100%;
   -o-object-fit: contain;
      object-fit: contain;
+}
+
+.end {
+  background: black;
+  padding: 32px;
+  font-size: 0.875em;
+}
+
+.footer__contact {
+  margin-top: 16px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.footer__button {
+  text-decoration: none;
+  color: white;
+  border: solid 3.2px;
+  padding: 4.8px;
+  padding-left: 32px;
+  padding-right: 32px;
+  font-weight: 500;
+  border-radius: 60px;
+}
+
+.footer__menu {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  list-style: none;
+}
+
+.footer__a {
+  color: #FFFFFF;
+  text-decoration: none;
+}
+
+.footer__item {
+  margin: 0 10px;
+}
+
+.footer__link {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
 }
 /*# sourceMappingURL=shop.css.map */
