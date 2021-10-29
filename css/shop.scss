@@ -9,15 +9,20 @@ body{
 
 .products{
     display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-between;
+    margin-left: 30px;
+    margin-right: 30px;
 }
 
 .product{
     display: block;
-    width: 365px;
+    width: 30%;
     text-decoration: none;
     color: black;
-    font-size: 1em;
-    margin: 0 30px;
+    font-size: 0.8em;
+    margin-top: 30px;
 
     &__image{
         width: 100%;
@@ -40,13 +45,17 @@ body{
     &__price{
         margin: 5px 0;
     }
-    &__button{
+    &__cart{
         border: none;
         background-color: transparent;
         margin-right: 15px;
         height: 36px;
+
+        &:disabled{
+            background-color: gray;
+        }
     }
-    &__cart{
+    &__button{
         width: 100%;
         object-fit: contain;
     }
