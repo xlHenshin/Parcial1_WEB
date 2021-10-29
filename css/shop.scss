@@ -1,4 +1,6 @@
 *{
+    margin: 0;
+    padding: 0;
     box-sizing: border-box;
 }
 
@@ -17,6 +19,17 @@ body{
     flex-direction: row;
     justify-content: space-between;
     align-items: center;
+    font-weight: 500;
+}
+
+.select{
+    background: #ECECEC;
+    border: none;
+    width: 200px;
+    height: 30px;
+    border-radius: 60px;
+    padding-left: 20px;
+    padding-right: 20px;
 }
 
 .products{
@@ -103,6 +116,7 @@ body{
         align-items: center;
         justify-content: center;
         list-style: none;
+        margin: 20px;
     }
     &__a{
         color: #FFFFFF;

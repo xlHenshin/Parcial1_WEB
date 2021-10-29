@@ -1,4 +1,6 @@
 * {
+  margin: 0;
+  padding: 0;
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
 }
@@ -27,6 +29,17 @@ body {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
+  font-weight: 500;
+}
+
+.select {
+  background: #ECECEC;
+  border: none;
+  width: 200px;
+  height: 30px;
+  border-radius: 60px;
+  padding-left: 20px;
+  padding-right: 20px;
 }
 
 .products {
@@ -155,6 +168,7 @@ body {
       -ms-flex-pack: center;
           justify-content: center;
   list-style: none;
+  margin: 20px;
 }
 
 .footer__a {
