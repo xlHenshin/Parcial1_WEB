@@ -37,7 +37,7 @@ const products = [
         price: "$60",
         image: "https://www.tesla.com/ns_videos/commerce/content/dam/tesla/LIFESTYLE/ACTIVEWEAR/TRAINING/5645669-00-A_0.jpg",
         description: "Featuring soft fleece and a jersey-lined hood, the Women’s Zip-Up Track Hoodie delivers the ultimate coverage and comfort in a standard fit. Made with two layers of soft cotton with a polyester yarn in interlock stitch, the light and comfortable fabric is ideal for both training and leisure.",
-        type: "menClothing"
+        type: "womenClothing"
     },
     {
         id: 6,
@@ -94,7 +94,8 @@ const productTemplate = (item) =>{
         const productAdded = {
             id: item.id,
             name: item.name,
-            image: item.image
+            image: item.image,
+            price: item.price
         };
         cart.push(productAdded);
         productCart.setAttribute("disabled", true);
@@ -105,3 +106,23 @@ const productTemplate = (item) =>{
 products.forEach(product =>{
     productTemplate(product);
 });
+
+const filterByCategory = document.getElementById("categories");
+
+filterByCategory.addEventListener("change", e=>{
+
+    const category = filterByCategory.value;
+    productSection.innerHTML = "";
+    let filteredProductsByCategory;
+
+    if (category !=="") {
+        filteredProductsByCategory = products.filter((product)=>product.type === category);
+    }else{
+        filteredProductsByCategory = products;
+    }
+    
+    filteredProductsByCategory.forEach(product =>{
+        
+        productTemplate(product);
+    });
+})

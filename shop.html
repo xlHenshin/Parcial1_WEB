@@ -21,6 +21,29 @@
 
     <main class="main">
 
+        <div class="filters">
+            <div>
+                <label for="categories">Filter By:</label>
+                <select name="categories" id="categories">
+                    <option value="">All Products</option>
+                    <option value="charging">Charging</option>
+                    <option value="vAccesories">Vehicle Accesories</option>
+                    <option value="menClothing">Men's Clothing</option>
+                    <option value="womenClothing">Women's Clothing</option>
+                    <option value="lifestyle">Lifestyle</option>
+                </select>
+            </div>
+
+            <div>
+                <label for="orderBy">Order By:</label>
+                <select name="orderBy" id="orderBy">
+                    <option value="">Select An Option</option>
+                    <option value="asc">Price: Lowest - Highest</option>
+                    <option value="desc">Price: Highest - Lowest</option>
+                </select>
+            </div>
+        </div>
+
         <section class="products" id="products">
         </section>
 
@@ -29,7 +52,7 @@
     <footer>
         <div class="footer__contact">
 
-            <a href="#" class="button">
+            <a href="#" class="footer__button">
                 <span>CONTACT US</span>
             </a>
 
