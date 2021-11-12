@@ -1,6 +1,6 @@
 import { initializeApp } from "https://www.gstatic.com/firebasejs/9.3.0/firebase-app.js";
 
-import { getAuth, createUserWithEmailAndPassword } from "https://www.gstatic.com/firebasejs/9.3.0/firebase-auth.js";
+import { getAuth, createUserWithEmailAndPassword, signInWithEmailAndPassword, onAuthStateChanged } from "https://www.gstatic.com/firebasejs/9.3.0/firebase-auth.js";
 
 const firebaseConfig = {
   apiKey: "AIzaSyCoGdfHu8q1gUrevCRzBjQCXd3-7sYzVQc",
@@ -18,20 +18,19 @@ const auth = getAuth();
 
 //=================================================================================
 
-const createUser = async() =>{
+const createUser = async(email, password) =>{
     
     try {
-        await createUserWithEmailAndPassword (auth, email, password)
-        alert(`Usuario ${email} creado satisfactoriamente`)
+        const {user} = await createUserWithEmailAndPassword (auth, email, password);
     } catch (e) {
         console.log(e.code);
 
         if (e.code==="auth/email-already-in-use") {
-            alert("Email already in use");
+            alert("Email Already In Use");
         }
 
         if (e.code==="auth/weak-password") {
-            alert("Week password");
+            alert("Week Password");
         }
     }
     
@@ -42,12 +41,17 @@ const registerForm = document.getElementById("register");
 registerForm.addEventListener("submit", e=>{
     e.preventDefault();
 
+    const firstName = registerForm.firstName.value;
+    const lastName = registerForm.lastName.value
     const email = registerForm.email.value;
     const password = registerForm.password.value;
 
     if (email&&password) {
 
-        createUser();
+        console.log("User created")
+        createUser(email, password);
+    }else{
+        alert("Complete all the information");
     }
     
 })
@@ -55,7 +59,7 @@ registerForm.addEventListener("submit", e=>{
 const login = async(email,password)=>{
 
     try {
-        const {user}=await signInWithEmailAndPassword(auth, email, password);
+        const {user} =await signInWithEmailAndPassword(auth, email, password);
         console.log(user);
     } catch (e) {
         console.log(e);
@@ -78,6 +82,15 @@ loginForm.addEventListener("submit", e =>{
     const password=loginForm.password.value;
 
     if(email && password){
-        login();
+        login(email, password);
+        console.log("Succesful")
+    }else{
+        alert("Complete all the information")
     }
-})
+});
+
+onAuthStateChanged(auth, (user)=>{
+    if (user) {
+        loginForm.classList.add("hidden");
+    }
+});
