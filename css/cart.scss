@@ -6,6 +6,7 @@
 
 body{
     font-family: 'Poppins', sans-serif;
+    background-color: #F8F8F8;
 }
 
 .navigation{
@@ -19,83 +20,66 @@ body{
     width: 125px
 }
 
-.cart__icon{
+.logged__icon{
     margin-right: 20px;
     margin-top: 20px;
     width: 20px
 }
 
-.filters{
-    margin: 20px 30px;
+.content{
+    
     display: flex;
     flex-direction: row;
     justify-content: space-between;
-    align-items: center;
-    font-weight: 500;
-}
-
-.select{
-    background: #ECECEC;
-    border: none;
-    width: 200px;
-    height: 30px;
-    border-radius: 60px;
-    padding-left: 20px;
-    padding-right: 20px;
-}
-
-.products{
-    display: flex;
-    flex-wrap: wrap;
-    align-items: center;
-    justify-content:space-between;
-    margin-left: 30px;
-    margin-right: 30px;
-    margin-bottom: 80px;
+    margin-left: 160px;
+    margin-right: 160px;
 }
 
 .product{
-    display: block;
-    width: 30%;
-    text-decoration: none;
-    color: black;
+
+    display: flex;
+    flex-direction: row;
     font-size: 0.8em;
     margin-top: 30px;
 
     &__image{
-        width: 100%;
+        width: 130px;
         object-fit: contain;
         box-shadow: 4px 4px 15px grey;
     }
+}
+
+.summary{
+
+    background-color: #FFFFFF;
+    width: 366px;
+    padding: 32px;
+    box-shadow: 4px 4px 15px grey;
+    display: flex;
+    flex-direction: column;
+    
     &__description{
+        margin-top: 25px;
+        margin-bottom: 25px;
+    }
+
+    &__item{
         display: flex;
         flex-direction: row;
         justify-content: space-between;
-        align-items: center;
     }
-    &__text{
-        padding: 0 15px;
-        margin-top: 20px;
+
+    &__total{
+        margin-bottom: 25px;
     }
-    &__name{
-        margin: 5px 0;
+
+    &__buttons{
+        display: flex;
+        flex-direction: column;
     }
-    &__price{
-        margin: 5px 0;
-    }
-    &__cart{
-        border: none;
-        background-color: transparent;
-        margin-right: 15px;
-        height: 36px;
-        cursor: pointer;
-        &:disabled{
-            background-color: gray;
-        }
-    }
-    &__button{
-        width: 100%;
-        object-fit: contain;
+    
+    &__checkout{
+       // margin-bottom: 25px;
     }
 }
 

@@ -1,4 +1,10 @@
-const products = [
+import { initializeApp } from "https://www.gstatic.com/firebasejs/9.3.0/firebase-app.js";
+import { getFirestore, doc, setDoc } from "https://www.gstatic.com/firebasejs/9.3.0/firebase-firestore.js";
+
+const app = initializeApp(firebaseConfig);
+const db = getFirestore(app);
+
+/*const products = [
     {
         id: 1,
         name: "Wall Connector - 24 ft",
@@ -29,7 +35,8 @@ const products = [
         price: 90,
         image: "https://www.tesla.com/ns_videos/commerce/content/dam/tesla/LIFESTYLE/OUTERWEAR/JACKETS/5645685-00-A_0.jpg",
         description: "Fully customized and uniquely styled, the Men's Corp Jacket features a silicone-printed T logo on the left chest and prominent Tesla wordmark across the back.",
-        type: "menClothing"
+        type: "menClothing",
+        sizes: ["S", "M", "L", "XL"]
     },
     {
         id: 5,
@@ -48,4 +55,8 @@ const products = [
         type: "charging"
     }
     
-];
+];*/
+
+products.forEach(async (product)=>{
+    await setDoc (doc(db,"products", `A00361743${product.id}`), product);
+});

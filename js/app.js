@@ -1,10 +1,60 @@
+import { initializeApp } from "https://www.gstatic.com/firebasejs/9.3.0/firebase-app.js";
+import { getAuth, onAuthStateChanged} from "https://www.gstatic.com/firebasejs/9.3.0/firebase-auth.js";
+import { getFirestore, collection, getDocs, doc, getDoc, setDoc} from "https://www.gstatic.com/firebasejs/9.3.0/firebase-firestore.js";
+
+const app = initializeApp(firebaseConfig);
+const auth = getAuth();
+const db = getFirestore(app);
+
+let products = [];
+let userLogged;
+let cart = [];
+
+//================================================================================================================
+
+const getAllProducts = async()=>{  
+    const collectionRef = collection(db, "products");
+    const {docs} = await getDocs(collectionRef);
+
+    console.log(docs);
+
+    const firebaseProducts = docs.map((doc)=>{
+        return {
+           ...doc.data(),
+            id: doc.id 
+        }
+    });
+
+    console.log(firebaseProducts)
+
+    firebaseProducts.forEach(product =>{
+        productTemplate(product);
+    });
+
+    products = firebaseProducts;
+};
+
 const getMyCart = () => {
 
     const cart = localStorage.getItem("cart");
     return cart ? JSON.parse(cart) : [];
 };
 
-const cart = getMyCart();
+const getFirebaseCart = async(userId) =>{
+
+    const docRef = doc(db, "cart", userId);
+    const docSnap = await getDoc(docRef);
+    const data = docSnap.data();
+
+    return data;
+};
+
+const addProductsToCart = async(products) => {
+
+    await setDoc(doc(db,"cart", userLogged.uid), {
+        products
+    });
+};
 
 const productSection = document.getElementById("products");
 
@@ -54,7 +104,13 @@ const productTemplate = (item) =>{
             image: item.image,
             price: item.price
         };
+
         cart.push(productAdded);
+
+        if (userLogged) {
+            addProductsToCart(cart);
+        };
+
         localStorage.setItem("cart", JSON.stringify(cart));
 
         productCart.setAttribute("disabled", true);
@@ -66,10 +122,6 @@ const productTemplate = (item) =>{
         productSection.appendChild(emptyItem);
     }
 };
-
-products.forEach(product =>{
-    productTemplate(product);
-});
 
 const filterByCategorySelect = document.getElementById("categories");
 const orderBySelect = document.getElementById("orderBy");
@@ -115,8 +167,22 @@ const loadProducts = ()=>{
     });
 }
 
-const user = localStorage.getItem("user", JSON.stringify(user));
+//const user = localStorage.getItem("user", JSON.stringify(user));
 
-if (user) {
-    consol
-}
+
+
+onAuthStateChanged(auth, async (user)=>{
+
+    console.log(user);
+
+    if (user) {
+        const result = await getFirebaseCart(user.uid);
+        cart = result.products;
+        console.log(cart);
+        userLogged = user;
+    } else {
+        cart = getMyCart();
+    }
+
+    getAllProducts();
+});

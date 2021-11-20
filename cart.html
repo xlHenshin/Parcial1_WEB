@@ -4,15 +4,89 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>CART</title>
+    <link rel="stylesheet" href="./css/cart.css">
 </head>
 <body>
-    <ul class="products" id="cart">
 
-    </ul>
+    <header class="principal">
+        <nav class="navigation">
+            <a href="#">
+                <img src="./resources/tesla.svg" alt="Tesla Logo" class="web__logo">
+            </a>
 
-    <h3 class="total" id="total"></h3>
+            <a href="./cart.html">
+                <img src="./resources/logout.svg" alt="Logged Icon" class="logged__icon">
+            </a>
+        </nav>
+    </header>
+
+    <section class="content">
+
+        <div class="left__content">
+            <h1 class="title">Cart</h1>
+
+            <ul class="products" id="cart"></ul>
+        </div>
+
+        <aside class="summary">
+
+            <div class="summary__text">
+                <h3 class="summary__title">Order Summary</h3>
+    
+            <div class="summary__description">
+    
+                <div class="summary__item">
+    
+                    <p>Subtotal</p>
+                    <p id="subtotal"></p>
+                </div>
+    
+                <div class="summary__item">
+    
+                    <p>Shipping</p>
+                    <p>Free</p>
+                </div>
+            </div>
+    
+            <h3 class="summary__total" id="total"></h3>
+            </div>
+    
+            <div class="summary__buttons">
+                <input class="summary__checkout" type="submit" value="CHECKOUT">
+                <a href="./shop.html">Continue Shopping</a>
+            </div>
+    
+        </aside>
+    </section>
+
+    <footer class="end">
+        <div class="footer__contact">
+
+            <a href="#" class="footer__button">
+                <span>CONTACT US</span>
+            </a>
+
+            <ul class="footer__menu">
+                <li class="footer__item"><a href="#" class="footer__a">Twitter</a></li>
+                <li class="footer__item"><a href="#" class="footer__a">Youtube</a></li>
+                <li class="footer__item"><a href="#" class="footer__a">Instagram</a></li>
+            </ul>
+        </div>
+
+        <div class="footer__links">
+            <ul class="footer__menu">
+                <li class="footer__item"><a href="#" class="footer__a">Tesla © 2021</a></li>
+                <li class="footer__item"><a href="#" class="footer__a">Privacy & Legal</a></li>
+                <li class="footer__item"><a href="#" class="footer__a">Careers</a></li>
+                <li class="footer__item"><a href="#" class="footer__a">News</a></li>
+                <li class="footer__item"><a href="#" class="footer__a">Engage</a></li>
+                <li class="footer__item"><a href="#" class="footer__a">Locations</a></li>
+            </ul>
+        </div>
+    </footer>
+
 </body>
 <script src="./js/utils.js"></script>
-<script src="./js/cart.js"></script>
+<script type="module" src="./js/cart.js"></script>
 </html>
