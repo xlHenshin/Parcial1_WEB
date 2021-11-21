@@ -132,10 +132,6 @@ body {
   cursor: pointer;
 }
 
-.product__cart:disabled {
-  background-color: gray;
-}
-
 .product__button {
   width: 100%;
   -o-object-fit: contain;

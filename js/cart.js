@@ -46,12 +46,17 @@ const renderProduct = (product) =>{
     
     <img src="${product.image}" alt="" class="product__image">
 
-            <div class="product__info">
+        	<div class="product__form">
+            
+                <div class="product__info">
+                    <h2 class="product__name">${product.name}</h2>
+                    <h3 class="product__price">$ ${formatCurrency(product.price)}</h3>
+                </div>
 
-                <h2 class="product__name">${product.name}</h2>
-                <h3 class="product__price">$ ${formatCurrency(product.price)}</h3>
-                <button class="product__cart">Remove</button>
-            </div>
+                <button class="product__button">
+                    <img src="./resources/delete.svg" alt="Delete" class="product__delete">
+                </button>
+            </div>  
     `;
 
     cartSection.appendChild(newProduct);

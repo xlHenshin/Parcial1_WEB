@@ -73,11 +73,11 @@ const productTemplate = (item) =>{
 
     if (isAdded) {
         buttonHtml = `<button class="product__cart" disabled>
-        <img src="./resources/cart.svg" alt="Cart" class="product__button">
+        <img class="product__icon" src="./resources/cartdisabled.svg" alt="Cart" class="product__button">
     </button>`
     }else{
         buttonHtml = `<button class="product__cart">
-        <img src="./resources/cart.svg" alt="Cart" class="product__button">
+        <img class="product__icon" src="./resources/cart.svg" alt="Cart" class="product__button">
     </button>`
     };
 

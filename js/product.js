@@ -25,6 +25,7 @@ const productImage = document.getElementById("productImage");
 const productName = document.getElementById("productName");
 const productDescription = document.getElementById("productDescription");
 const productPrice = document.getElementById("productPrice")
+const customContent = document.getElementById("customContent")
 
 const loadProductInfo = (product) =>{
     productName.innerText=product.name;
@@ -33,6 +34,7 @@ const loadProductInfo = (product) =>{
     productImage.setAttribute("src", product.image);
 
     if (product.size) {
+
         createSelectSize(product.size);
     }
 };
@@ -45,8 +47,9 @@ const createSelectSize = (size) => {
     selectContent.innerHTML = "<label class='product__size'>Size</label>";
 
     // Lleno el select con un input
-    size.forEach(size => {
-        select.innerHTML += `<option value="${size}">${size}</option>`;
+    size.forEach(s => {
+        select.innerHTML += `<option value="${s}">${s}</option>`;4
+        console.log(select)
     });
     
     // Añado el select dentro del selectContent
