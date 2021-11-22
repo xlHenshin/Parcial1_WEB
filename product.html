@@ -18,9 +18,17 @@
                 <img src="./resources/tesla.svg" alt="Tesla Logo" class="web__logo">
             </a>
 
-            <a href="./cart.html">
-                <img src="./resources/cart.svg" alt="Cart Icon" class="cart__icon">
-            </a>
+            <div class="navigation__icons">
+                <a class="cart" href="./cart.html">
+                    <img src="./resources/cart.svg" alt="Cart Icon" class="cart__icon">
+                </a>
+
+                <button class="log" id="logBtn">
+                    <img src="./resources/login.svg" alt="Log" class="logBtn">
+                </button>
+
+            </div>
+
         </nav>
     </header>
 
@@ -37,7 +45,7 @@
                 <h3 class="product__price" id="productPrice"></h3>
 
                 <div class="product__custom" id="customContent"></div>
-                <button class="product__addToCart">ADD TO CART</button>
+                <button id="addToCart" class="product__addToCart">ADD TO CART</button>
             </div>
             
             <div class="product__bottom">

@@ -12,6 +12,12 @@ body{
     display: flex;
     flex-direction: row;
     justify-content: space-between;
+
+    &__icons{
+        display: flex;
+        align-items: center;
+        margin-right: 20px;
+    }
 }
 
 .web__logo{
@@ -19,10 +25,31 @@ body{
     width: 125px
 }
 
-.cart__icon{
+.cart{
+    width: 20px;
+    height: 20px;
     margin-right: 20px;
-    margin-top: 20px;
+}
+.cart__icon{
+    
+    width: 100%
+}
+
+.log{
+    width: 20px;
+    height: 20px;
+    border: none;
+    background-color: transparent;
+    margin-right: 15px;
+    height: 36px;
+    cursor: pointer;
     width: 20px
+}
+
+.title{
+    font-size: 3em;
+    margin-left: 30px;
+    margin-bottom: 50px;
 }
 
 .filters{

@@ -12,7 +12,9 @@ let total= 0;
 let email = "";
 let done = 0;
 
-const checkOutForm = document.getElementById("checkout")
+const checkOutForm = document.getElementById("checkout");
+const subtotalSection = document.getElementById("subtotal");
+const totalSection = document.getElementById("total");
 
 const getMyCart = () => {
 
@@ -64,7 +66,12 @@ const createOrder = async(userInfo) =>{
     }
 
     
-
+    if (done) {
+        console.log("Done!")
+        window.location.href = "./done.html"
+    }else{
+        console.log("Waiting...")
+    }
 
 };
 
@@ -90,19 +97,16 @@ checkOutForm.addEventListener("submit", e =>{
     }
 
     if (firstName && lastName && city && address && phoneNumber) {
+        console.log("Done before: "+ done);
+        done=1;
+        console.log("Done after: "+ done);
+
         createOrder(userInfo);
         alert("Purchase succesful!");
-        done=1;
+        
     }
 
     console.log(done);
-
-    if (done) {
-        console.log("Done!")
-        //location.href="./done.html";
-    }else{
-        console.log("Waiting...")
-    }
     
 });
 
@@ -121,6 +125,9 @@ onAuthStateChanged(auth, async (user)=>{
             total += parseInt(product.price);
         });
 
+        subtotalSection.innerText = `$${formatCurrency(total)}`
+        totalSection.innerText= `Total: $${formatCurrency(total)}`;
+
         userLogged = user;
 
         if (cart.length) {
@@ -129,7 +136,7 @@ onAuthStateChanged(auth, async (user)=>{
             console.log("Carro lleno");
         }else{
             alert("There's no products in the cart, redirecting...");
-            location.href = "./shop.html"
+            window.location.href = "./shop.html"
         }
     } else {
         cart = getMyCart();

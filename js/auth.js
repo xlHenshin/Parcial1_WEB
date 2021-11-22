@@ -23,6 +23,9 @@ const registerForm = document.getElementById("register");
 const loginForm = document.getElementById("login");
 const logoutButton = document.getElementById("logout");
 
+const rSignIn = document.getElementById("registerBtn");
+const lRegister = document.getElementById("loginBtn");
+
 //=================================================================================
 
 const createUser = async(email, password, userFields) =>{
@@ -126,14 +129,29 @@ const logout = async () => {
 
 logoutButton.addEventListener("click", e => {
     logout();
-})
+});
+
+rSignIn.addEventListener("click", e =>{
+
+    registerForm.classList.add("hidden");
+    loginForm.classList.remove("hidden");
+});
+
+lRegister.addEventListener("click", e =>{
+
+    loginForm.classList.add("hidden")
+    registerForm.classList.remove("hidden");;
+});
 
 onAuthStateChanged(auth, (user)=>{
     if (user) {
+        console.log("You are logged in");
+        window.location.href = "./shop.html"
         loginForm.classList.add("hidden");
+        registerForm.classList.add("hidden");
         logoutButton.classList.add("visible");
     }else{
-        loginForm.classList.remove("hidden");
+        registerForm.classList.add("hidden");
         logoutButton.classList.remove("visible");
     }
 });

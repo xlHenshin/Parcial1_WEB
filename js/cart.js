@@ -1,5 +1,5 @@
 import { initializeApp } from "https://www.gstatic.com/firebasejs/9.3.0/firebase-app.js";
-import { getAuth, onAuthStateChanged} from "https://www.gstatic.com/firebasejs/9.3.0/firebase-auth.js";
+import { getAuth, onAuthStateChanged, signOut} from "https://www.gstatic.com/firebasejs/9.3.0/firebase-auth.js";
 import { getFirestore, doc, getDoc} from "https://www.gstatic.com/firebasejs/9.3.0/firebase-firestore.js";
 
 const app = initializeApp(firebaseConfig);
@@ -7,11 +7,16 @@ const auth = getAuth();
 const db = getFirestore(app);
 
 const cartSection = document.getElementById("cart");
+const subtotalSection = document.getElementById("subtotal");
 const totalSection = document.getElementById("total");
 const checkOutBtn = document.getElementById("checkoutBtn")
 
 let cart = [];
 let userLogged = {};
+
+let logStatus = false;
+
+const logBtn = document.getElementById("logBtn");
 
 const getMyCart = () => {
 
@@ -82,7 +87,8 @@ const renderMyCart = (cart) =>{
         renderProduct(product);
     });
 
-    totalSection.innerText= `Total: $ ${formatCurrency(total)}`;
+    subtotalSection.innerText = `$${formatCurrency(total)}`
+    totalSection.innerText= `Total: $${formatCurrency(total)}`;
 };
 
 checkOutBtn.addEventListener("click", e =>{
@@ -98,12 +104,50 @@ checkOutBtn.addEventListener("click", e =>{
     
 });
 
+const logout = async () => {
+    console.log("Logout");
+    console.log(signOut);
+    
+    try {
+        await signOut(auth);
+    } catch (e) {
+        console.log(e);
+    }
+};
+
+const isLogged = () =>{
+
+    if (logStatus) {
+        
+        document.getElementById("logBtn").src = "./resources/login.svg"
+        console.log("Logged In. You can Log Out");
+    }else{
+
+        document.getElementById("logBtn").src = "./resources/logout.svg"
+        console.log("Not Logged In. You can Sign In");
+    }
+};
+
+logBtn.addEventListener("click", e =>{
+
+    if (logStatus) {
+        
+        logStatus = false;
+        logout();
+    }else{
+
+        window.location.href = "./login.html"
+    }
+});
+
 onAuthStateChanged(auth, async (user)=>{
 
     console.log(user);
 
     if (user) {
+        logStatus=true;
         const result = await getFirebaseCart(user.uid);
+        
         if (result) {
             cart = result.products;
         }else{
@@ -116,4 +160,6 @@ onAuthStateChanged(auth, async (user)=>{
         cart = getMyCart();
         renderMyCart(cart);
     }
+
+    isLogged();
 });

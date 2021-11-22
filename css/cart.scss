@@ -13,6 +13,7 @@ body{
     display: flex;
     flex-direction: row;
     justify-content: space-between;
+    align-items: center;
 }
 
 .web__logo{
@@ -20,9 +21,15 @@ body{
     width: 125px
 }
 
-.logged__icon{
-    margin-right: 20px;
-    margin-top: 20px;
+.log{
+    width: 20px;
+    height: 20px;
+    border: none;
+    background-color: transparent;
+    margin-right: 15px;
+    height: 36px;
+    margin-right: 40px;
+    cursor: pointer;
     width: 20px
 }
 

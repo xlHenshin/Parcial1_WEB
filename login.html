@@ -5,29 +5,102 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>LOGIN</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="./css/login.css">
 </head>
 <body>
-    <form action="" id="register">
-        <h2>Create Account</h2>
-        <input type="text" name="firstName" placeholder="First Name">
-        <input type="text" name="lastName" placeholder="Last Name">
-        <input type="email" name="email" placeholder="Email">
-        <input type="password" name="password" placeholder="Password">
 
+    <header class="principal">
+        <nav class="navigation">
+            <a href="#">
+                <img src="./resources/tesla.svg" alt="Tesla Logo" class="web__logo">
+            </a>
+        </nav>
+    </header>
 
-        <input type="submit" value="Register">
-    </form>
+    <section class="forms">
 
-    <form action="" id="login">
-        <h2>Sign In</h2>
-        <input type="email" name="email" placeholder="Email">
-        <input type="password" name="password" placeholder="Password">
+        <form class="register" action="" id="register">
 
-        <input type="submit" value="Sign In">
-    </form>
+            <h2 class="register__title">Create Account</h2>
+    
+            <div class="register__item">
+                <p class="register__paragraph">First Name</p>
+                <input class="register__textinput" type="text" name="firstName">
+            </div>
+    
+            <div class="register__item">
+                <p class="register__paragraph">Last Name</p>
+                <input class="register__textinput" type="text" name="lastName">
+            </div>
+            
+            <div class="register__item">
+                <p class="register__paragraph">Email Address</p>
+                <input class="register__textinput" type="email" name="email">
+            </div>
+    
+            <div class="register__item">
+                <p class="register__paragraph">Password</p>
+                <input class="register__textinput" type="password" name="password">
+            </div>
+    
+            <input type="submit" value="CREATE ACCOUNT">
+    
+            <p class="register__p">OR</p>
+    
+            <input class="register__signin" id="registerBtn" type="button" value="SIGN IN">
+        </form>
+    
+        <form class="login" action="" id="login">
+            <h2 class="login__title">Sign In</h2>
+            
+            <div class="login__item">
+                <p class="login__paragraph">Email Address</p>
+                <input class="login__textinput" type="email" name="email">
+            </div>
+    
+            <div class="login__item">
+                <p class="login__paragraph">Password</p>
+                <input class="login__textinput" type="password" name="password">
+            </div>
+    
+            <input type="submit" value="SIGN IN">
+    
+            <p class="login__p">OR</p>
+    
+            <input class="login__register" id="loginBtn" type="button" value="REGISTER">
+        </form>
+    </section>
 
     <button id="logout">Log Out</button>
+
+    <footer class="end">
+        <div class="footer__contact">
+
+            <a href="#" class="footer__button">
+                <span>CONTACT US</span>
+            </a>
+
+            <ul class="footer__menu">
+                <li class="footer__item"><a href="#" class="footer__a">Twitter</a></li>
+                <li class="footer__item"><a href="#" class="footer__a">Youtube</a></li>
+                <li class="footer__item"><a href="#" class="footer__a">Instagram</a></li>
+            </ul>
+        </div>
+
+        <div class="footer__links">
+            <ul class="footer__menu">
+                <li class="footer__item"><a href="#" class="footer__a">Tesla © 2021</a></li>
+                <li class="footer__item"><a href="#" class="footer__a">Privacy & Legal</a></li>
+                <li class="footer__item"><a href="#" class="footer__a">Careers</a></li>
+                <li class="footer__item"><a href="#" class="footer__a">News</a></li>
+                <li class="footer__item"><a href="#" class="footer__a">Engage</a></li>
+                <li class="footer__item"><a href="#" class="footer__a">Locations</a></li>
+            </ul>
+        </div>
+    </footer>
 </body>
 
 <script src="./js/utils.js"></script>

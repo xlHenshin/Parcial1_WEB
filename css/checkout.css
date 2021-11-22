@@ -98,6 +98,7 @@ body {
 }
 
 .checkout__paragraph {
+  margin-left: 15px;
   margin-bottom: 15px;
 }
 
@@ -153,7 +154,7 @@ input[type="submit"] {
 .summary {
   background-color: #FFFFFF;
   width: 366px;
-  height: 339px;
+  height: 220px;
   padding: 32px;
   -webkit-box-shadow: 4px 4px 15px grey;
           box-shadow: 4px 4px 15px grey;
