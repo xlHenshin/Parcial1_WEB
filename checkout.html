@@ -4,14 +4,13 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>CART</title>
+    <title>CHECKOUT</title>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="./css/cart.css">
+    <link rel="stylesheet" href="./css/checkout.css">
 </head>
 <body>
-
     <header class="principal">
         <nav class="navigation">
             <a href="#">
@@ -26,10 +25,61 @@
 
     <section class="content">
 
-        <div class="left__content">
-            <h1 class="title">Cart</h1>
+        <div class="leftside">
+            <h1 class="title">Checkout</h1>
 
-            <ul class="products" id="cart"></ul>
+            <form id="checkout" class="checkout">
+
+                <div class="checkout__columns">
+                    
+                    <div class="checkout__column">
+    
+                        <div class="checkout__item">
+                            <p class="checkout__paragraph">First Name</p>
+                            <input type="text" class="checkout__textinput" name="firstName" id="">
+                        </div>
+        
+                        <div class="checkout__item">
+                            <p class="checkout__paragraph">City</p>
+                            <input type="text" class="checkout__textinput" name="city" id="">
+                        </div>
+        
+                        <div class="checkout__item">
+                            <p class="checkout__paragraph">Phone Number</p>
+                            <input type="text" class="checkout__textinput" name="pNumber" id="">
+                        </div>
+                    </div>
+        
+                    <div class="checkout__column">
+        
+                        <div class="checkout__item">
+                            <p class="checkout__paragraph">Last Name</p>
+                            <input type="text" class="checkout__textinput" name="lastName" id="">
+                        </div>
+        
+                        <div class="checkout__item">
+                            <p class="checkout__paragraph">Address</p>
+                            <input type="text" class="checkout__textinput" name="address" id="">
+                        </div>
+        
+                        <div class="checkout__item">
+                            <p class="checkout__paragraph">Payment Method</p>
+                            <select name="" id="" class="checkout__select">
+                                <option value="paypal">PayPal</option>
+                                <option value="card">Debit/Credit Card</option>
+                            </select>
+                        </div>
+                    </div>
+                </div>
+
+                
+
+                <div class="buttons">
+                    <a class="buttons__cart" href="./cart.html">Return To Cart</a>
+                    <input type="submit" value="CONFIRM ORDER">
+                </div>
+            </form>
+
         </div>
 
         <aside class="summary">
@@ -52,15 +102,16 @@
                 </div>
             </div>
     
-            <h3 class="summary__total" id="total"></h3>
+            <!--<h3 class="summary__total" id="total"></h3>
             </div>
     
             <div class="summary__buttons">
-                <input class="summary__checkout" id="checkoutBtn" type="button" value="CHECKOUT">
+                <input type="submit" value="CHECKOUT">
                 <a class="summary__shop" href="./shop.html">Continue Shopping</a>
-            </div>
+            </div>-->
     
         </aside>
+
     </section>
 
     <footer class="end">
@@ -91,5 +142,5 @@
 
 </body>
 <script src="./js/utils.js"></script>
-<script type="module" src="./js/cart.js"></script>
+<script type="module" src="./js/checkout.js"></script>
 </html>

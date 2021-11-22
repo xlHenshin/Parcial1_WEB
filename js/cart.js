@@ -8,6 +8,7 @@ const db = getFirestore(app);
 
 const cartSection = document.getElementById("cart");
 const totalSection = document.getElementById("total");
+const checkOutBtn = document.getElementById("checkoutBtn")
 
 let cart = [];
 let userLogged = {};
@@ -47,7 +48,7 @@ const renderProduct = (product) =>{
     <img src="${product.image}" alt="" class="product__image">
 
         	<div class="product__form">
-            
+
                 <div class="product__info">
                     <h2 class="product__name">${product.name}</h2>
                     <h3 class="product__price">$ ${formatCurrency(product.price)}</h3>
@@ -83,6 +84,19 @@ const renderMyCart = (cart) =>{
 
     totalSection.innerText= `Total: $ ${formatCurrency(total)}`;
 };
+
+checkOutBtn.addEventListener("click", e =>{
+    e.preventDefault();
+
+    if (cart.length) {
+            
+        console.log("CHECKOUTTT");
+        location.href="./checkout.html"
+    }else{
+        alert("There's not products in the cart")
+    }
+    
+});
 
 onAuthStateChanged(auth, async (user)=>{
 
