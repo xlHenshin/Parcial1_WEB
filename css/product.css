@@ -151,6 +151,10 @@ body {
   margin-bottom: 25px;
 }
 
+.product__addToCart:disabled {
+  background-color: #494949;
+}
+
 .product__bottom {
   color: #717171;
 }

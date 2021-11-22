@@ -66,6 +66,17 @@ const loadProductInfo = (product) =>{
     productPrice.innerText=`$ ${formatCurrency(product.price)}`;
     productImage.setAttribute("src", product.image);
 
+    const isAdded= cart.some(productCart => productCart.id === product.id);
+    
+    console.log(cart);
+    console.log(isAdded);
+
+    if (isAdded) {
+
+        addToCart.disabled = true;
+        console.log("true");
+    }
+
     if (product.size) {
 
         createSelectSize(product.size);
@@ -92,7 +103,6 @@ const createSelectSize = (size) => {
 
 };
 
-getProduct();
 
 const logout = async () => {
     console.log("Logout");
@@ -148,7 +158,6 @@ addToCart.addEventListener("click", e =>{
     
     localStorage.setItem("cart", JSON.stringify(cart));
 
-    addToCart.disabled = true;
     console.log(addToCart)
     alert("Product Added");
 })
@@ -160,6 +169,8 @@ onAuthStateChanged(auth, async (user)=>{
     if (user) {
         logStatus=true;
         const result = await getFirebaseCart(user.uid);
+        getProduct();
+
         console.log(result);
 
         if (result) {

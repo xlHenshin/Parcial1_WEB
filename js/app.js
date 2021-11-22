@@ -21,13 +21,12 @@ const getAllProducts = async()=>{
     const {docs} = await getDocs(collectionRef);
 
     const firebaseProducts = docs.map((doc)=>{
+       // console.log(doc)
         return {
            ...doc.data(),
             id: doc.id 
         }
     });
-
-    console.log(firebaseProducts)
 
     firebaseProducts.forEach(product =>{
         productTemplate(product);
@@ -48,7 +47,9 @@ const getFirebaseCart = async(userId) =>{
     const docSnap = await getDoc(docRef);
     const data = docSnap.data();
 
-    return data;
+   return docSnap.exists() ? docSnap.data() : {
+       products: []
+   } 
 };
 
 const addProductsToCart = async(products) => {
@@ -68,6 +69,7 @@ const productTemplate = (item) =>{
     product.className = "product";
 
     product.setAttribute("href",`./product.html?id=${item.id}`);
+
 
     const isAdded= cart.some(productCart => productCart.id === item.id);
 
@@ -171,13 +173,13 @@ const loadProducts = ()=>{
 }
 
 const logout = async () => {
-    console.log("Logout");
-    console.log(signOut);
+   // console.log("Logout");
+   // console.log(signOut);
     
     try {
         await signOut(auth);
     } catch (e) {
-        console.log(e);
+       // console.log(e);
     }
 };
 
@@ -186,11 +188,11 @@ const isLogged = () =>{
     if (logStatus) {
         
         document.getElementById("logBtn").src = "./resources/login.svg"
-        console.log("Logged In. You can Log Out");
+       // console.log("Logged In. You can Log Out");
     }else{
 
         document.getElementById("logBtn").src = "./resources/logout.svg"
-        console.log("Not Logged In. You can Sign In");
+       // console.log("Not Logged In. You can Sign In");
     }
 };
 
@@ -200,6 +202,7 @@ logBtn.addEventListener("click", e =>{
         
         logStatus = false;
         logout();
+        alert("Logged out succesfully");
     }else{
 
         window.location.href = "./login.html"
@@ -208,24 +211,19 @@ logBtn.addEventListener("click", e =>{
 
 onAuthStateChanged(auth, async (user)=>{
 
-    console.log(user);
+   // console.log(user);
 
     if (user) {
-        logStatus=true;
+        logStatus = true;
         const result = await getFirebaseCart(user.uid);
-        console.log(result);
-
-        if (result) {
-            cart = result.products;
-        }else{
-            console.log("Empty!")
-        }
-        console.log(cart);
+        cart = result.products;
+        getAllProducts();
         userLogged = user;
     } else {
         cart = getMyCart();
+        getAllProducts();
     }
 
     isLogged();
-    getAllProducts();
+    
 });
