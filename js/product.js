@@ -23,11 +23,16 @@ const getProduct = async () =>{
     const docSnap = await getDoc(docRef);
     const data = docSnap.data();
 
+    console.log(docSnap);
+
     productSection.classList.add("loaded");
     spinner.classList.add("loaded");
 
     product=data;
-    loadProductInfo(data);
+    loadProductInfo({
+        ...data,
+        id: docSnap.id
+    });
 }
 
 const getMyCart = () => {
@@ -67,9 +72,9 @@ const loadProductInfo = (product) =>{
     productImage.setAttribute("src", product.image);
 
     const isAdded= cart.some(productCart => productCart.id === product.id);
-    
+
     console.log(cart);
-    console.log(isAdded);
+    console.log(product);
 
     if (isAdded) {
 
