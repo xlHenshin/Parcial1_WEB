@@ -16,8 +16,6 @@ const getAllProducts = async()=>{
     const collectionRef = collection(db, "products");
     const {docs} = await getDocs(collectionRef);
 
-    console.log(docs);
-
     const firebaseProducts = docs.map((doc)=>{
         return {
            ...doc.data(),
@@ -115,6 +113,7 @@ const productTemplate = (item) =>{
 
         productCart.setAttribute("disabled", true);
         alert("Product Added");
+        loadProducts();
     });
     }else{
         const emptyItem = document.createElement("a");
@@ -177,7 +176,13 @@ onAuthStateChanged(auth, async (user)=>{
 
     if (user) {
         const result = await getFirebaseCart(user.uid);
-        cart = result.products;
+        console.log(result);
+
+        if (result) {
+            cart = result.products;
+        }else{
+            console.log("Empty!")
+        }
         console.log(cart);
         userLogged = user;
     } else {

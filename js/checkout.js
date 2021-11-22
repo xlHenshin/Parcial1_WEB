@@ -1,6 +1,6 @@
 import { initializeApp } from "https://www.gstatic.com/firebasejs/9.3.0/firebase-app.js";
 import { getAuth, onAuthStateChanged} from "https://www.gstatic.com/firebasejs/9.3.0/firebase-auth.js";
-import { getFirestore, doc, getDoc, addDoc, collection} from "https://www.gstatic.com/firebasejs/9.3.0/firebase-firestore.js";
+import { getFirestore, doc, getDoc, addDoc, collection, deleteDoc} from "https://www.gstatic.com/firebasejs/9.3.0/firebase-firestore.js";
 
 const app = initializeApp(firebaseConfig);
 const auth = getAuth();
@@ -9,6 +9,8 @@ const db = getFirestore(app);
 let cart = [];
 let userLogged = {};
 let total= 0;
+let email = "";
+let done = 0;
 
 const checkOutForm = document.getElementById("checkout")
 
@@ -27,18 +29,34 @@ const getFirebaseCart = async(userId) =>{
     }
 };
 
+const deleteCart = async() =>{
+
+    try {
+        await deleteDoc(doc(db,"cart",userLogged.uid));
+        console.log(cart)
+    } catch (e) {
+        console.log(e);
+    }
+
+    
+}
+
 const createOrder = async(userInfo) =>{
     
     try {
+
+        console.log(userInfo)
         
-        await addDoc(collection(db, "orders"),{
+        const order = await addDoc(collection(db, "orders"),{
 
             userInfo,
-            email: userInfo.email,
-            cart,
+            products: cart,
             total,
             status: "pending",
         });
+
+        console.log(order);
+        deleteCart();
 
     } catch (e) {
 
@@ -65,13 +83,25 @@ checkOutForm.addEventListener("submit", e =>{
         lastName,
         city,
         address,
-        phoneNumber
+        phoneNumber,
+        email
+
 
     }
 
     if (firstName && lastName && city && address && phoneNumber) {
-            
         createOrder(userInfo);
+        alert("Purchase succesful!");
+        done=1;
+    }
+
+    console.log(done);
+
+    if (done) {
+        console.log("Done!")
+        //location.href="./done.html";
+    }else{
+        console.log("Waiting...")
     }
     
 });
@@ -81,15 +111,26 @@ onAuthStateChanged(auth, async (user)=>{
     console.log(user);
 
     if (user) {
+
+        email=user.email;
+
         const result = await getFirebaseCart(user.uid);
         cart = result.products;
-        console.log("Pre: "+total);
+
         cart.forEach(product=>{
             total += parseInt(product.price);
         });
-        console.log("Post: "+total);
 
         userLogged = user;
+
+        if (cart.length) {
+            
+            console.log(cart.length);
+            console.log("Carro lleno");
+        }else{
+            alert("There's no products in the cart, redirecting...");
+            location.href = "./shop.html"
+        }
     } else {
         cart = getMyCart();
     }

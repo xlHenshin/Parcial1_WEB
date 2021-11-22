@@ -104,7 +104,11 @@ onAuthStateChanged(auth, async (user)=>{
 
     if (user) {
         const result = await getFirebaseCart(user.uid);
-        cart = result.products;
+        if (result) {
+            cart = result.products;
+        }else{
+            console.log("Empty!")
+        }
         console.log(cart);
         renderMyCart(cart);
         userLogged = user;

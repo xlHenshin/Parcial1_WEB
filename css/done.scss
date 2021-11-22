@@ -1,0 +1,119 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    font-family: 'Poppins', sans-serif;
+    background-color: #F8F8F8;
+}
+
+.navigation{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+.web__logo{
+    margin-left: 20px;
+    width: 125px
+}
+
+.logged__icon{
+    margin-right: 20px;
+    margin-top: 20px;
+    width: 20px
+}
+
+.check{
+    width: 100%;
+    margin-top: 95px;
+    margin-bottom: 95px;
+    align-items: center;
+    justify-content: center;
+    display: flex;
+    flex-direction: column;
+
+    &__image{
+
+        margin-bottom: 50px;
+    }
+
+    &__congratulations{
+
+        width: 50%;
+        text-align: center;
+        font-size: 1.5em;
+        font-weight: 500;
+        margin-bottom: 20px;
+    }
+    &__paragraph{
+        color: #717171;
+        text-align: center;
+        font-size: 1em;
+        font-weight: 400;
+        margin-bottom: 40px;
+    }
+}
+
+input[type="button"]{
+    
+    background-color: #3E6AE1;
+    border: none;
+    color: white;
+    text-decoration: none;
+    cursor: pointer;
+    padding:12px;
+    padding-left: 80px;
+    padding-right: 80px;
+    border-radius: 60px;
+    font-weight: 600;
+    margin-bottom: 25px;
+}
+
+.end{
+    background: black;
+    padding: 32px;
+    font-size: 0.875em; 
+}
+
+.footer{
+    &__contact{
+        margin-top: 16px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+    }
+    &__button{
+        text-decoration: none;
+        color: white;
+        border: solid 3.2px;
+        padding: 4.8px;
+        padding-left: 32px;
+        padding-right: 32px;
+        font-weight: 500;
+        border-radius: 60px;
+    }
+    &__menu{
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        list-style: none;
+        margin: 20px;
+    }
+    &__a{
+        color: #FFFFFF;
+        text-decoration: none;
+    }
+    &__item{
+        margin: 0 10px;
+    }
+    &__link{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+    }
+}
