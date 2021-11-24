@@ -145,8 +145,6 @@ onAuthStateChanged(auth, async (user) => {
 
         if (result) {
         cart = result.products;
-        } else {
-        alert("Cart is empty!");
         }
         userLogged = user;
     } else {

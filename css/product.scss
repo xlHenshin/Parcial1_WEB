@@ -1,42 +1,44 @@
-*{
+* {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
 }
 
-body{
-    font-family: 'Poppins', sans-serif;
-    background-color: #F8F8F8;
+body {
+    font-family: "Poppins", sans-serif;
+    background-color: #f8f8f8;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
 }
 
-.navigation{
+.navigation {
     display: flex;
     flex-direction: row;
     justify-content: space-between;
 
-    &__icons{
+    &__icons {
         display: flex;
         align-items: center;
         margin-right: 20px;
     }
 }
 
-.web__logo{
+.web__logo {
     margin-left: 20px;
-    width: 125px
+    width: 125px;
 }
 
-.cart{
+.cart {
     width: 20px;
     height: 20px;
     margin-right: 20px;
 }
-.cart__icon{
-    
-    width: 100%
+.cart__icon {
+    width: 100%;
 }
 
-.log{
+.log {
     width: 20px;
     height: 20px;
     border: none;
@@ -44,22 +46,16 @@ body{
     margin-right: 15px;
     height: 36px;
     cursor: pointer;
-    width: 20px
+    width: 20px;
 }
 
-.end{
-    background: black;
-    padding: 32px;
-    font-size: 0.875em; 
-}
-
-.product{
-
+.product {
+    width: 100%;
     margin-top: 60px;
     margin-bottom: 95px;
     display: none;
 
-    &.loaded{
+    &.loaded {
         width: 100%;
         padding-left: 120px;
         padding-right: 120px;
@@ -68,41 +64,55 @@ body{
         justify-content: space-between;
     }
 
-    &__image{
+    &__image {
         width: 60%;
-        margin-right: 100px;
     }
 
-    &__mainImage{
+    &__mainImage {
         width: 100%;
         box-shadow: 4px 4px 15px grey;
+        object-fit: cover;
     }
 
-    &__description{
-        width: 50%;
+    &__description {
+        display: flex;
+        flex-direction: column;
+        width: 40%;
+        margin-left: 100px;
     }
 
-    &__top{
+    &__descriptionText {
+        font-size: 1.2em;
+        margin-bottom: 25px;
+    }
+
+    &__paragraph{
+        font-size: 1em;
+    }
+
+    &__top {
+        width: 100%;
         margin-bottom: 50px;
     }
 
-    &__name{
+    &__name {
         font-size: 2em;
         font-weight: 500;
+        margin-bottom: 5px;
     }
 
-    &__price{
+    &__price {
         font-size: 1.5em;
         font-weight: 500;
         margin-bottom: 40px;
     }
 
-    &__custom{
+    &__custom {
         margin-bottom: 20px;
     }
 
-    &__custom select{
-        background: #ECECEC;
+    &__custom select {
+        background: #ececec;
         border: none;
         width: 100px;
         height: 30px;
@@ -111,48 +121,54 @@ body{
         padding-right: 20px;
     }
 
-    &__size{
+    &__size {
         font-size: 1em;
         font-weight: 500;
         margin-right: 30px;
+
     }
 
-    &__addToCart{
-        background-color: #3E6AE1;
+    &__addToCart {
+        width: 50%;
+        background-color: #3e6ae1;
         border: none;
         color: white;
         text-decoration: none;
         cursor: pointer;
-        padding:12px;
-        padding-left: 80px;
-        padding-right: 80px;
+        padding: 12px;
+        padding-left: 20px;
+        padding-right: 20px;
+        margin-top: 5px;
         border-radius: 60px;
         font-weight: 600;
-        margin-bottom: 25px;
-        &:disabled{
-
+        font-size: 0.8em;
+        &:disabled {
             background-color: #494949;
         }
     }
 
-    &__bottom{
+    &__bottom {
         color: #717171;
-    }
-
-    &__description{
-        margin-bottom: 20px;
     }
 }
 
-.footer{
-    &__contact{
+.end {
+    width: 100%;
+    background: black;
+    padding: 32px;
+    font-size: 0.875em;
+    margin-top: auto;
+}
+
+.footer {
+    &__contact {
         margin-top: 16px;
         display: flex;
         flex-direction: column;
         align-items: center;
         justify-content: center;
     }
-    &__button{
+    &__button {
         text-decoration: none;
         color: white;
         border: solid 3.2px;
@@ -162,21 +178,21 @@ body{
         font-weight: 500;
         border-radius: 60px;
     }
-    &__menu{
+    &__menu {
         display: flex;
         align-items: center;
         justify-content: center;
         list-style: none;
         margin: 20px;
     }
-    &__a{
-        color: #FFFFFF;
+    &__a {
+        color: #ffffff;
         text-decoration: none;
     }
-    &__item{
+    &__item {
         margin: 0 10px;
     }
-    &__link{
+    &__link {
         display: flex;
         flex-direction: column;
         align-items: center;
@@ -195,12 +211,16 @@ body{
     top: 50%;
     margin-left: 50%;
 
-    &.loaded{
+    &.loaded {
         display: none;
     }
-  }
-  
-  @keyframes spin {
-    0% { transform: rotate(0deg); }
-    100% { transform: rotate(360deg); }
-  }
+}
+
+@keyframes spin {
+    0% {
+        transform: rotate(0deg);
+    }
+    100% {
+        transform: rotate(360deg);
+    }
+}

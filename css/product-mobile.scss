@@ -1,0 +1,147 @@
+@media all and (max-width: 1200px) {
+    .product {
+        &.loaded {
+            padding-left: 100px;
+            padding-right: 100px;
+        }
+
+        &__addToCart {
+            font-weight: 600;
+            font-size: 0.7em;
+        }
+    }
+}
+
+@media all and (max-width: 1000px) {
+    .product {
+        &.loaded {
+            padding-left: 80px;
+            padding-right: 80px;
+        }
+
+        &__addToCart {
+            width: 60%;
+        }
+    }
+}
+
+@media all and (max-width: 768px) {
+    .product {
+        &.loaded {
+            padding-left: 60px;
+            padding-right: 60px;
+        }
+
+        &__description{
+            margin-left: 50px;
+        }
+
+        &__name{
+            font-size: 1.5em;
+        }
+
+        &__price{
+            font-size: 1em;
+            margin-bottom: 20px;
+        }
+
+        &__top{
+            margin-bottom: 25px;
+        }
+
+        &__size{
+            font-size: 0.8em;
+            margin-right: 15px;
+        }
+
+        &__descriptionText {
+            font-size: 1em;
+            margin-bottom: 15px;
+        }
+    
+        &__paragraph{
+            font-size: 0.8em;
+        }
+
+        &__addToCart {
+            width: 80%;
+            font-size: 0.6em;
+        }
+    }
+
+    .end {
+        font-size: 0.7em;
+    }
+}
+
+@media all and (max-width: 560px) {
+
+    .web__logo {
+        width: 80px;
+    }
+
+    .product {
+        &.loaded {
+            padding-left: 30px;
+            padding-right: 30px;
+        }
+
+        &__description{
+            margin-left: 25px;
+        }
+
+        &__name{
+            font-size: 1em;
+        }
+
+        &__price{
+            font-size: 0.8em;
+            margin-bottom: 15px;
+        }
+
+        &__top{
+            margin-bottom: 20px;
+        }
+
+        &__custom select {
+            width: 80px;
+            height: 30px;
+            padding-left: 10px;
+            padding-right: 10px;
+        }
+
+        &__descriptionText {
+            font-size: 0.8em;
+            margin-bottom: 15px;
+        }
+    
+        &__paragraph{
+            font-size: 0.6em;
+        }
+
+        &__addToCart {
+            width: 100%;
+            font-size: 0.6em;
+        }
+    }
+
+    .end {
+        font-size: 0.5em;
+        padding: 16px;
+    }
+
+    .footer__menu {
+        flex-direction: column;
+    }
+}
+
+@media all and (max-width: 375px) {
+
+    .product {
+
+        &__custom select {
+            width: 70px;
+            height: 30px;
+        }
+    }
+}

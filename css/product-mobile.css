@@ -1,0 +1,116 @@
+@media all and (max-width: 1200px) {
+  .product.loaded {
+    padding-left: 100px;
+    padding-right: 100px;
+  }
+  .product__addToCart {
+    font-weight: 600;
+    font-size: 0.7em;
+  }
+}
+
+@media all and (max-width: 1000px) {
+  .product.loaded {
+    padding-left: 80px;
+    padding-right: 80px;
+  }
+  .product__addToCart {
+    width: 60%;
+  }
+}
+
+@media all and (max-width: 768px) {
+  .product.loaded {
+    padding-left: 60px;
+    padding-right: 60px;
+  }
+  .product__description {
+    margin-left: 50px;
+  }
+  .product__name {
+    font-size: 1.5em;
+  }
+  .product__price {
+    font-size: 1em;
+    margin-bottom: 20px;
+  }
+  .product__top {
+    margin-bottom: 25px;
+  }
+  .product__size {
+    font-size: 0.8em;
+    margin-right: 15px;
+  }
+  .product__descriptionText {
+    font-size: 1em;
+    margin-bottom: 15px;
+  }
+  .product__paragraph {
+    font-size: 0.8em;
+  }
+  .product__addToCart {
+    width: 80%;
+    font-size: 0.6em;
+  }
+  .end {
+    font-size: 0.7em;
+  }
+}
+
+@media all and (max-width: 560px) {
+  .web__logo {
+    width: 80px;
+  }
+  .product.loaded {
+    padding-left: 30px;
+    padding-right: 30px;
+  }
+  .product__description {
+    margin-left: 25px;
+  }
+  .product__name {
+    font-size: 1em;
+  }
+  .product__price {
+    font-size: 0.8em;
+    margin-bottom: 15px;
+  }
+  .product__top {
+    margin-bottom: 20px;
+  }
+  .product__custom select {
+    width: 80px;
+    height: 30px;
+    padding-left: 10px;
+    padding-right: 10px;
+  }
+  .product__descriptionText {
+    font-size: 0.8em;
+    margin-bottom: 15px;
+  }
+  .product__paragraph {
+    font-size: 0.6em;
+  }
+  .product__addToCart {
+    width: 100%;
+    font-size: 0.6em;
+  }
+  .end {
+    font-size: 0.5em;
+    padding: 16px;
+  }
+  .footer__menu {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+}
+
+@media all and (max-width: 375px) {
+  .product__custom select {
+    width: 70px;
+    height: 30px;
+  }
+}
+/*# sourceMappingURL=product-mobile.css.map */
