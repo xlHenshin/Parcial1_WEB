@@ -1,42 +1,41 @@
-*{
+* {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
 }
 
-body{
-    font-family: 'Poppins', sans-serif;
-    background-color: #F8F8F8;
+body {
+    font-family: "Poppins", sans-serif;
+    background-color: #f8f8f8;
 }
 
-.navigation{
+.navigation {
     display: flex;
     flex-direction: row;
     justify-content: space-between;
 
-    &__icons{
+    &__icons {
         display: flex;
         align-items: center;
         margin-right: 20px;
     }
 }
 
-.web__logo{
+.web__logo {
     margin-left: 20px;
-    width: 125px
+    width: 125px;
 }
 
-.cart{
+.cart {
     width: 20px;
     height: 20px;
     margin-right: 20px;
 }
-.cart__icon{
-    
-    width: 100%
+.cart__icon {
+    width: 100%;
 }
 
-.log{
+.log {
     width: 20px;
     height: 20px;
     border: none;
@@ -44,45 +43,55 @@ body{
     margin-right: 15px;
     height: 36px;
     cursor: pointer;
-    width: 20px
+    width: 20px;
 }
 
-.title{
+.title {
     font-size: 3em;
     margin-left: 30px;
     margin-bottom: 50px;
 }
 
-.filters{
+.filters {
     margin: 20px 30px;
     display: flex;
     flex-direction: row;
     justify-content: space-between;
     align-items: center;
     font-weight: 500;
+
+    &__item {
+        width: 20%;
+    }
+
+    &__text {
+        font-size: 1em;
+        width: 40%;
+        margin-right: 10px;
+    }
+
+    &__select {
+        background: #ececec;
+        border: none;
+        width: 60%;
+        height: 30px;
+        border-radius: 60px;
+        padding-left: 20px;
+        padding-right: 20px;
+    }
 }
 
-.select{
-    background: #ECECEC;
-    border: none;
-    width: 200px;
-    height: 30px;
-    border-radius: 60px;
-    padding-left: 20px;
-    padding-right: 20px;
-}
-
-.products{
+.products {
     display: flex;
     flex-wrap: wrap;
     align-items: center;
-    justify-content:space-between;
+    justify-content: space-between;
     margin-left: 30px;
     margin-right: 30px;
     margin-bottom: 80px;
 }
 
-.product{
+.product {
     display: block;
     width: 30%;
     text-decoration: none;
@@ -90,55 +99,62 @@ body{
     font-size: 0.8em;
     margin-top: 30px;
 
-    &__image{
+    &__image {
         width: 100%;
         object-fit: contain;
         box-shadow: 4px 4px 15px grey;
     }
-    &__description{
+    &__description {
+        width: 100%;
         display: flex;
         flex-direction: row;
         justify-content: space-between;
         align-items: center;
     }
-    &__text{
-        padding: 0 15px;
+    &__text {
+        width: 90%;
+        height: 100%;
         margin-top: 20px;
+        padding-right: 10px;
     }
-    &__name{
+    &__name {
         margin: 5px 0;
     }
-    &__price{
+    &__price {
         margin: 5px 0;
     }
-    &__cart{
+    &__cart {
+        width: 10%;
         border: none;
         background-color: transparent;
-        margin-right: 15px;
         height: 36px;
         cursor: pointer;
     }
-    &__button{
+
+    &__icon {
+        width: 25px;
+    }
+    &__button {
         width: 100%;
         object-fit: contain;
     }
 }
 
-.end{
+.end {
     background: black;
     padding: 32px;
-    font-size: 0.875em; 
+    font-size: 0.875em;
 }
 
-.footer{
-    &__contact{
+.footer {
+    &__contact {
         margin-top: 16px;
         display: flex;
         flex-direction: column;
         align-items: center;
         justify-content: center;
     }
-    &__button{
+    &__button {
         text-decoration: none;
         color: white;
         border: solid 3.2px;
@@ -148,21 +164,21 @@ body{
         font-weight: 500;
         border-radius: 60px;
     }
-    &__menu{
+    &__menu {
         display: flex;
         align-items: center;
         justify-content: center;
         list-style: none;
         margin: 20px;
     }
-    &__a{
-        color: #FFFFFF;
+    &__a {
+        color: #ffffff;
         text-decoration: none;
     }
-    &__item{
+    &__item {
         margin: 0 10px;
     }
-    &__link{
+    &__link {
         display: flex;
         flex-direction: column;
         align-items: center;

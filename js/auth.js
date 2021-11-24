@@ -1,19 +1,6 @@
 import { initializeApp } from "https://www.gstatic.com/firebasejs/9.3.0/firebase-app.js";
-
 import { getAuth, createUserWithEmailAndPassword, signInWithEmailAndPassword, onAuthStateChanged, signOut } from "https://www.gstatic.com/firebasejs/9.3.0/firebase-auth.js";
-
 import { getFirestore, doc, setDoc, getDoc } from "https://www.gstatic.com/firebasejs/9.3.0/firebase-firestore.js";
-
-const firebaseConfig = {
-  apiKey: "AIzaSyCoGdfHu8q1gUrevCRzBjQCXd3-7sYzVQc",
-  authDomain: "teslaweb-fe738.firebaseapp.com",
-  projectId: "teslaweb-fe738",
-  storageBucket: "teslaweb-fe738.appspot.com",
-  messagingSenderId: "635230137447",
-  appId: "1:635230137447:web:957a781f440825819eb8c2",
-  measurementId: "G-5NYWJK97MK"
-};
-
 
 const app = initializeApp(firebaseConfig);
 const auth = getAuth();
@@ -25,8 +12,6 @@ const logoutButton = document.getElementById("logout");
 
 const rSignIn = document.getElementById("registerBtn");
 const lRegister = document.getElementById("loginBtn");
-
-//=================================================================================
 
 const createUser = async(email, password, userFields) =>{
     
@@ -58,7 +43,6 @@ registerForm.addEventListener("submit", e=>{
     const password = registerForm.password.value;
 
     if (email&&password) {
-
         console.log("User created")
         createUser(email, password, {
             firstName,
@@ -85,7 +69,6 @@ const getUserInfo = async(userId) =>{
 }
 
 const login = async(email,password)=>{
-
     try {
         const {user} =await signInWithEmailAndPassword(auth, email, password);
         const userInfo = await getUserInfo(user.uid);
@@ -132,13 +115,11 @@ logoutButton.addEventListener("click", e => {
 });
 
 rSignIn.addEventListener("click", e =>{
-
     registerForm.classList.add("hidden");
     loginForm.classList.remove("hidden");
 });
 
 lRegister.addEventListener("click", e =>{
-
     loginForm.classList.add("hidden")
     registerForm.classList.remove("hidden");;
 });

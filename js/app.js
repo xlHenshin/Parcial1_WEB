@@ -1,6 +1,6 @@
 import { initializeApp } from "https://www.gstatic.com/firebasejs/9.3.0/firebase-app.js";
-import { getAuth, onAuthStateChanged, signOut} from "https://www.gstatic.com/firebasejs/9.3.0/firebase-auth.js";
-import { getFirestore, collection, getDocs, doc, getDoc, setDoc} from "https://www.gstatic.com/firebasejs/9.3.0/firebase-firestore.js";
+import { getAuth, onAuthStateChanged, signOut } from "https://www.gstatic.com/firebasejs/9.3.0/firebase-auth.js";
+import { getFirestore, collection, getDocs, doc, getDoc, setDoc, } from "https://www.gstatic.com/firebasejs/9.3.0/firebase-firestore.js";
 
 const app = initializeApp(firebaseConfig);
 const auth = getAuth();
@@ -14,21 +14,18 @@ let logStatus = false;
 
 const logBtn = document.getElementById("logBtn");
 
-//================================================================================================================
-
-const getAllProducts = async()=>{  
+const getAllProducts = async () => {
     const collectionRef = collection(db, "products");
-    const {docs} = await getDocs(collectionRef);
+    const { docs } = await getDocs(collectionRef);
 
-    const firebaseProducts = docs.map((doc)=>{
-       // console.log(doc)
+    const firebaseProducts = docs.map((doc) => {
         return {
-           ...doc.data(),
-            id: doc.id 
-        }
+        ...doc.data(),
+        id: doc.id,
+        };
     });
 
-    firebaseProducts.forEach(product =>{
+    firebaseProducts.forEach((product) => {
         productTemplate(product);
     });
 
@@ -36,84 +33,78 @@ const getAllProducts = async()=>{
 };
 
 const getMyCart = () => {
-
     const cart = localStorage.getItem("cart");
     return cart ? JSON.parse(cart) : [];
 };
 
-const getFirebaseCart = async(userId) =>{
-
+const getFirebaseCart = async (userId) => {
     const docRef = doc(db, "cart", userId);
     const docSnap = await getDoc(docRef);
     const data = docSnap.data();
 
-   return docSnap.exists() ? docSnap.data() : {
-       products: []
-   } 
+    return docSnap.exists() ? docSnap.data(): {
+            products: [],
+        };
 };
 
-const addProductsToCart = async(products) => {
-
-    await setDoc(doc(db,"cart", userLogged.uid), {
-        products
+const addProductsToCart = async (products) => {
+    await setDoc(doc(db, "cart", userLogged.uid), {
+        products,
     });
 };
 
 const productSection = document.getElementById("products");
 
-const productTemplate = (item) =>{
-
+const productTemplate = (item) => {
     if (item.name) {
-
     const product = document.createElement("a");
     product.className = "product";
 
-    product.setAttribute("href",`./product.html?id=${item.id}`);
+    product.setAttribute("href", `./product.html?id=${item.id}`);
 
-
-    const isAdded= cart.some(productCart => productCart.id === item.id);
+    const isAdded = cart.some((productCart) => productCart.id === item.id);
 
     let buttonHtml;
 
     if (isAdded) {
         buttonHtml = `<button class="product__cart" disabled>
         <img class="product__icon" src="./resources/cartdisabled.svg" alt="Cart" class="product__button">
-    </button>`
-    }else{
+        </button>`;
+    } else {
         buttonHtml = `<button class="product__cart">
         <img class="product__icon" src="./resources/cart.svg" alt="Cart" class="product__button">
-    </button>`
-    };
+        </button>`;
+    }
 
     product.innerHTML = `
-    <img src="${item.image}" class="product__image">
-                <div class="product__description">
-                    <div class="product__text">
-                        <h3 class="product__name">${item.name}</h3>
-                        <h3 class="product__price">$${item.price}</h3>
-                    </div>
-                    ${buttonHtml}
-                </div>
+        <img src="${item.image}" class="product__image">
+        <div class="product__description">
+            <div class="product__text">
+                <h3 class="product__name">${item.name}</h3>
+                <h3 class="product__price">$${item.price}</h3>
+            </div>
+            ${buttonHtml}
+        </div>
     `;
 
     productSection.appendChild(product);
-    
+
     const productCart = product.querySelector(".product__cart");
 
-    productCart.addEventListener("click", e =>{
+    productCart.addEventListener("click", (e) => {
         e.preventDefault();
         const productAdded = {
             id: item.id,
             name: item.name,
             image: item.image,
-            price: item.price
+            price: item.price,
         };
 
         cart.push(productAdded);
 
         if (userLogged) {
             addProductsToCart(cart);
-        };
+        }
 
         localStorage.setItem("cart", JSON.stringify(cart));
 
@@ -121,7 +112,7 @@ const productTemplate = (item) =>{
         alert("Product Added");
         loadProducts();
     });
-    }else{
+    } else {
         const emptyItem = document.createElement("a");
         emptyItem.className = "product";
         productSection.appendChild(emptyItem);
@@ -131,88 +122,76 @@ const productTemplate = (item) =>{
 const filterByCategorySelect = document.getElementById("categories");
 const orderBySelect = document.getElementById("orderBy");
 
-orderBySelect.addEventListener("change", e =>{
-
+orderBySelect.addEventListener("change", (e) => {
     loadProducts();
 });
 
-filterByCategorySelect.addEventListener("change", e=>{
-
+filterByCategorySelect.addEventListener("change", (e) => {
     loadProducts();
 });
 
-const loadProducts = ()=>{
-
+const loadProducts = () => {
     const category = filterByCategorySelect.value;
     const order = orderBySelect.value;
 
     productSection.innerHTML = "";
     let filteredProductsByCategory;
 
-    if (category !=="") {
-        filteredProductsByCategory = products.filter((product)=>product.type === category);
-    }else{
+    if (category !== "") {
+        filteredProductsByCategory = products.filter(
+        (product) => product.type === category
+        );
+    } else {
         filteredProductsByCategory = products;
     }
 
-    if (order ==="asc") {
-        filteredProductsByCategory = filteredProductsByCategory.sort((a,b)=>a.price - b.price);
+    if (order === "asc") {
+        filteredProductsByCategory = filteredProductsByCategory.sort(
+        (a, b) => a.price - b.price
+        );
     }
 
-    if (order ==="desc") {
-        filteredProductsByCategory = filteredProductsByCategory.sort((a,b)=>b.price - a.price);
+    if (order === "desc") {
+        filteredProductsByCategory = filteredProductsByCategory.sort(
+        (a, b) => b.price - a.price
+        );
     }
 
     if (filteredProductsByCategory.length == 2) {
         filteredProductsByCategory.push({});
     }
-    filteredProductsByCategory.forEach(product =>{
-        
+    filteredProductsByCategory.forEach((product) => {
         productTemplate(product);
     });
-}
+    };
 
-const logout = async () => {
-   // console.log("Logout");
-   // console.log(signOut);
-    
+    const logout = async () => {
     try {
         await signOut(auth);
     } catch (e) {
-       // console.log(e);
+        console.log(e);
     }
 };
 
-const isLogged = () =>{
-
+const isLogged = () => {
     if (logStatus) {
-        
-        document.getElementById("logBtn").src = "./resources/login.svg"
-       // console.log("Logged In. You can Log Out");
-    }else{
-
-        document.getElementById("logBtn").src = "./resources/logout.svg"
-       // console.log("Not Logged In. You can Sign In");
+        document.getElementById("logBtn").src = "./resources/login.svg";
+    } else {
+        document.getElementById("logBtn").src = "./resources/logout.svg";
     }
 };
 
-logBtn.addEventListener("click", e =>{
-
+logBtn.addEventListener("click", (e) => {
     if (logStatus) {
-        
         logStatus = false;
         logout();
         alert("Logged out succesfully");
-    }else{
-
-        window.location.href = "./login.html"
+    } else {
+        window.location.href = "./login.html";
     }
 });
 
-onAuthStateChanged(auth, async (user)=>{
-
-   // console.log(user);
-
+onAuthStateChanged(auth, async (user) => {
     if (user) {
         logStatus = true;
         const result = await getFirebaseCart(user.uid);
@@ -225,5 +204,4 @@ onAuthStateChanged(auth, async (user)=>{
     }
 
     isLogged();
-    
 });

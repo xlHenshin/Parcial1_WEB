@@ -71,13 +71,9 @@ const createProduct = async () => {
             feedback.innerText = "Something went wrong!";
         }
     } else {
-        console.log("Complete all spaces...");
+        alert("Complete all spaces...");
     }
 };
-
-// Subir la foto del producto
-// Imagen accesible via URL
-// Ya puedo crear el producto en la base de datos, con todos los datos... (imagen)
 
 createProductForm.addEventListener("submit", e => {
     e.preventDefault();

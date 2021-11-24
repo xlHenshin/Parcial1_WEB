@@ -1,0 +1,153 @@
+@media all and (max-width: 1200px) {
+    .product {
+        font-size: 0.7em;
+    }
+
+    .filters {
+        &__item {
+            width: 25%;
+        }
+    }
+}
+
+@media all and (max-width: 1000px) {
+    .product {
+        font-size: 0.65em;
+
+        &__icon {
+            width: 20px;
+        }
+    }
+
+    .filters {
+        &__text {
+            font-size: 0.8em;
+        }
+
+        &__item {
+            width: 30%;
+        }
+    }
+}
+
+@media all and (max-width: 768px) {
+    .title {
+        font-size: 2em;
+        margin-left: 30px;
+        margin-bottom: 25px;
+    }
+
+    .web__logo {
+        width: 100px;
+    }
+
+    .filters {
+        &__item {
+            width: 40%;
+        }
+    }
+
+    .end {
+        font-size: 0.7em;
+    }
+
+    .product {
+        font-size: 0.58em;
+
+        &__name {
+            height: 32px;
+        }
+    }
+}
+
+@media all and (max-width: 560px) {
+    .web__logo {
+        width: 80px;
+    }
+
+    .title {
+        font-size: 2em;
+        margin-left: 30px;
+        margin-bottom: 25px;
+    }
+
+    .filters {
+        &__item {
+            width: 45%;
+        }
+
+        &__select {
+            height: 20px;
+        }
+    }
+
+    .product {
+        font-size: 0.5em;
+
+        &__icon {
+            width: 15px;
+        }
+
+        &__menu {
+            flex-direction: column;
+            margin: 10px;
+        }
+
+        &__name {
+            height: 34px;
+        }
+    }
+
+    .end {
+        font-size: 0.5em;
+        padding: 16px;
+    }
+
+    .footer__menu {
+        flex-direction: column;
+    }
+}
+
+@media all and (max-width: 475px) {
+    .filters {
+        &__text {
+            font-size: 0.6em;
+        }
+
+        &__item {
+            width: 50%;
+        }
+    }
+}
+
+@media all and (max-width: 375px) {
+
+    .title {
+        font-size: 1.5em;
+        margin-left: 20px;
+        margin-bottom: 20px;
+    }
+
+    .products {
+        margin-left: 15px;
+        margin-right: 15px;
+        margin-bottom: 40px;
+    }
+
+    .filters {
+        margin-left: 15px;
+        margin-right: 15px;
+    }
+
+    .product {
+        font-size: 0.4em;
+
+        &__name {
+            height: 24px;
+        }
+
+        &__text {
+            padding-right: 10px;
+        }
+    }
+}

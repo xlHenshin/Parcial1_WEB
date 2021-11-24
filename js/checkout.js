@@ -1,6 +1,6 @@
 import { initializeApp } from "https://www.gstatic.com/firebasejs/9.3.0/firebase-app.js";
-import { getAuth, onAuthStateChanged} from "https://www.gstatic.com/firebasejs/9.3.0/firebase-auth.js";
-import { getFirestore, doc, getDoc, addDoc, collection, deleteDoc} from "https://www.gstatic.com/firebasejs/9.3.0/firebase-firestore.js";
+import { getAuth, onAuthStateChanged } from "https://www.gstatic.com/firebasejs/9.3.0/firebase-auth.js";
+import { getFirestore, doc, getDoc, addDoc, collection, deleteDoc } from "https://www.gstatic.com/firebasejs/9.3.0/firebase-firestore.js";
 
 const app = initializeApp(firebaseConfig);
 const auth = getAuth();
@@ -17,13 +17,11 @@ const subtotalSection = document.getElementById("subtotal");
 const totalSection = document.getElementById("total");
 
 const getMyCart = () => {
-
     const cart = localStorage.getItem("cart");
     return cart ? JSON.parse(cart) : [];
 };
 
 const getFirebaseCart = async(userId) =>{
-
     const docRef = doc(db, "cart", userId);
     const docSnap = await getDoc(docRef);
     return docSnap.exists() ? docSnap.data() : {
@@ -35,7 +33,6 @@ const deleteCart = async() =>{
 
     try {
         await deleteDoc(doc(db,"cart",userLogged.uid));
-        console.log(cart)
     } catch (e) {
         console.log(e);
     }
@@ -46,33 +43,23 @@ const deleteCart = async() =>{
 const createOrder = async(userInfo) =>{
     
     try {
-
-        console.log(userInfo)
-        
         const order = await addDoc(collection(db, "orders"),{
-
             userInfo,
             products: cart,
             total,
             status: "pending",
         });
 
-        console.log(order);
         deleteCart();
 
     } catch (e) {
-
         console.log(e);
     }
 
     
     if (done) {
-        console.log("Done!")
         window.location.href = "./done.html"
-    }else{
-        console.log("Waiting...")
     }
-
 };
 
 checkOutForm.addEventListener("submit", e =>{
@@ -97,23 +84,13 @@ checkOutForm.addEventListener("submit", e =>{
     }
 
     if (firstName && lastName && city && address && phoneNumber) {
-        console.log("Done before: "+ done);
         done=1;
-        console.log("Done after: "+ done);
-
         createOrder(userInfo);
         alert("Purchase succesful!");
-        
-    }
-
-    console.log(done);
-    
+    };   
 });
 
 onAuthStateChanged(auth, async (user)=>{
-
-    console.log(user);
-
     if (user) {
 
         email=user.email;
@@ -130,14 +107,11 @@ onAuthStateChanged(auth, async (user)=>{
 
         userLogged = user;
 
-        if (cart.length) {
-            
-            console.log(cart.length);
-            console.log("Carro lleno");
-        }else{
+        if (cart.length===0) {
             alert("There's no products in the cart, redirecting...");
             window.location.href = "./shop.html"
-        }
+        };
+
     } else {
         cart = getMyCart();
     }

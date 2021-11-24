@@ -1,0 +1,125 @@
+@media all and (max-width: 1200px) {
+  .product {
+    font-size: 0.7em;
+  }
+  .filters__item {
+    width: 25%;
+  }
+}
+
+@media all and (max-width: 1000px) {
+  .product {
+    font-size: 0.65em;
+  }
+  .product__icon {
+    width: 20px;
+  }
+  .filters__text {
+    font-size: 0.8em;
+  }
+  .filters__item {
+    width: 30%;
+  }
+}
+
+@media all and (max-width: 768px) {
+  .title {
+    font-size: 2em;
+    margin-left: 30px;
+    margin-bottom: 25px;
+  }
+  .web__logo {
+    width: 100px;
+  }
+  .filters__item {
+    width: 40%;
+  }
+  .end {
+    font-size: 0.7em;
+  }
+  .product {
+    font-size: 0.58em;
+  }
+  .product__name {
+    height: 32px;
+  }
+}
+
+@media all and (max-width: 560px) {
+  .web__logo {
+    width: 80px;
+  }
+  .title {
+    font-size: 2em;
+    margin-left: 30px;
+    margin-bottom: 25px;
+  }
+  .filters__item {
+    width: 45%;
+  }
+  .filters__select {
+    height: 20px;
+  }
+  .product {
+    font-size: 0.5em;
+  }
+  .product__icon {
+    width: 15px;
+  }
+  .product__menu {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    margin: 10px;
+  }
+  .product__name {
+    height: 34px;
+  }
+  .end {
+    font-size: 0.5em;
+    padding: 16px;
+  }
+  .footer__menu {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+}
+
+@media all and (max-width: 475px) {
+  .filters__text {
+    font-size: 0.6em;
+  }
+  .filters__item {
+    width: 50%;
+  }
+}
+
+@media all and (max-width: 375px) {
+  .title {
+    font-size: 1.5em;
+    margin-left: 20px;
+    margin-bottom: 20px;
+  }
+  .products {
+    margin-left: 15px;
+    margin-right: 15px;
+    margin-bottom: 40px;
+  }
+  .filters {
+    margin-left: 15px;
+    margin-right: 15px;
+  }
+  .product {
+    font-size: 0.4em;
+  }
+  .product__name {
+    height: 24px;
+  }
+  .product__text {
+    padding-right: 10px;
+  }
+}
+/*# sourceMappingURL=shop-mobile.css.map */

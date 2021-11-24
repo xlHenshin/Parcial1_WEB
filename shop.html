@@ -9,6 +9,7 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="./css/shop.css">
+    <link rel="stylesheet" href="./css/shop-mobile.css">
 </head>
 <body>
     <header class="principal">
@@ -36,9 +37,9 @@
         <h1 class="title">Shop</h1>
 
         <div class="filters">
-            <div>
-                <label for="categories">Filter By:</label>
-                <select name="categories" id="categories" class="select">
+            <div class="filters__item">
+                <label class="filters__text" for="categories">Filter By:</label>
+                <select name="categories" id="categories" class="filters__select">
                     <option value="">All Products</option>
                     <option value="charging">Charging</option>
                     <option value="vAccesories">Vehicle Accesories</option>
@@ -48,9 +49,9 @@
                 </select>
             </div>
 
-            <div>
-                <label for="orderBy">Order By:</label>
-                <select name="orderBy" id="orderBy" class="select">
+            <div class="filters__item">
+                <label class="filters__text" for="orderBy">Order By:</label>
+                <select name="orderBy" id="orderBy" class="filters__select">
                     <option value="">Select An Option</option>
                     <option value="asc">Price: Lowest - Highest</option>
                     <option value="desc">Price: Highest - Lowest</option>
