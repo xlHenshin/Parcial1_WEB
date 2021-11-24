@@ -8,6 +8,14 @@
 body {
   font-family: "Poppins", sans-serif;
   background-color: #f8f8f8;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  min-height: 100vh;
 }
 
 .navigation {
@@ -188,9 +196,11 @@ body {
 }
 
 .end {
+  width: 100%;
   background: black;
   padding: 32px;
   font-size: 0.875em;
+  margin-top: auto;
 }
 
 .footer__contact {

@@ -51,7 +51,18 @@ body {
   width: 20px;
 }
 
+.main {
+  width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
 .content {
+  width: 100%;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -62,14 +73,14 @@ body {
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
           justify-content: space-between;
-  margin-left: 160px;
-  margin-right: 160px;
+  margin-left: 120px;
+  margin-right: 120px;
   margin-bottom: 114px;
 }
 
 .left__content {
-  width: 632px;
-  margin-right: 122px;
+  width: 70%;
+  margin-right: 100px;
 }
 
 .title {
@@ -109,6 +120,7 @@ body {
 
 .product__info {
   margin-left: 25px;
+  margin-right: 25px;
 }
 
 .product__name {
@@ -128,7 +140,7 @@ body {
 
 .summary {
   background-color: #FFFFFF;
-  width: 366px;
+  width: 340px;
   height: 339px;
   padding: 32px;
   -webkit-box-shadow: 4px 4px 15px grey;
@@ -140,9 +152,21 @@ body {
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.summary__text {
+  width: 100%;
+}
+
+.summary__title {
+  font-size: 1.2em;
 }
 
 .summary__description {
+  font-size: 1em;
   margin-top: 25px;
   margin-bottom: 25px;
 }
@@ -161,6 +185,7 @@ body {
 }
 
 .summary__total {
+  font-size: 1.2em;
   margin-bottom: 25px;
 }
 
@@ -177,7 +202,24 @@ body {
           align-items: center;
 }
 
+.summary__checkout {
+  width: 100%;
+  background-color: #3E6AE1;
+  border: none;
+  color: white;
+  text-decoration: none;
+  cursor: pointer;
+  padding: 12px;
+  padding-left: 20px;
+  padding-right: 20px;
+  border-radius: 60px;
+  font-weight: 600;
+  font-size: 1em;
+  margin-bottom: 25px;
+}
+
 .summary__shop {
+  font-size: 1em;
   color: #717171;
 }
 
@@ -254,19 +296,5 @@ body {
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
-}
-
-input[type="button"] {
-  background-color: #3E6AE1;
-  border: none;
-  color: white;
-  text-decoration: none;
-  cursor: pointer;
-  padding: 12px;
-  padding-left: 80px;
-  padding-right: 80px;
-  border-radius: 60px;
-  font-weight: 600;
-  margin-bottom: 25px;
 }
 /*# sourceMappingURL=cart.css.map */

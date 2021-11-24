@@ -9,6 +9,7 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="./css/cart.css">
+    <link rel="stylesheet" href="./css/cart-mobile.css">
 </head>
 <body>
 
@@ -24,44 +25,47 @@
         </nav>
     </header>
 
-    <section class="content">
+    <main class="main">
 
-        <div class="left__content">
-            <h1 class="title">Cart</h1>
+        <section class="content">
 
-            <ul class="products" id="cart"></ul>
-        </div>
-
-        <aside class="summary">
-
-            <div class="summary__text">
-                <h3 class="summary__title">Order Summary</h3>
+            <div class="left__content">
+                <h1 class="title">Cart</h1>
     
-            <div class="summary__description">
+                <ul class="products" id="cart"></ul>
+            </div>
     
-                <div class="summary__item">
+            <div class="summary">
     
-                    <p>Subtotal</p>
-                    <p id="subtotal"></p>
+                <div class="summary__text">
+                    <h3 class="summary__title">Order Summary</h3>
+        
+                <div class="summary__description">
+        
+                    <div class="summary__item">
+        
+                        <p>Subtotal</p>
+                        <p id="subtotal"></p>
+                    </div>
+        
+                    <div class="summary__item">
+        
+                        <p>Shipping</p>
+                        <p>Free</p>
+                    </div>
                 </div>
-    
-                <div class="summary__item">
-    
-                    <p>Shipping</p>
-                    <p>Free</p>
+        
+                <h3 class="summary__total" id="total"></h3>
                 </div>
+        
+                <div class="summary__buttons">
+                    <button class="summary__checkout" id="checkoutBtn">CHECKOUT</button>
+                    <a class="summary__shop" href="./shop.html">Continue Shopping</a>
+                </div>
+        
             </div>
-    
-            <h3 class="summary__total" id="total"></h3>
-            </div>
-    
-            <div class="summary__buttons">
-                <input class="summary__checkout" id="checkoutBtn" type="button" value="CHECKOUT">
-                <a class="summary__shop" href="./shop.html">Continue Shopping</a>
-            </div>
-    
-        </aside>
-    </section>
+        </section>
+    </main>
 
     <footer class="end">
         <div class="footer__contact">

@@ -1,0 +1,131 @@
+@media all and (max-width: 1200px) {
+  .product {
+    font-size: 0.7em;
+  }
+  .product__image {
+    width: 130px;
+    -o-object-fit: contain;
+       object-fit: contain;
+    -webkit-box-shadow: 4px 4px 15px grey;
+            box-shadow: 4px 4px 15px grey;
+  }
+  .product__name {
+    margin-bottom: 20px;
+    font-weight: 500;
+  }
+  .product__price {
+    font-size: 1.3em;
+  }
+  .summary {
+    width: 330px;
+  }
+  .summary__title {
+    font-size: 1.1em;
+  }
+  .summary__description {
+    font-size: 0.9em;
+  }
+  .summary__total {
+    font-size: 1.1em;
+  }
+  .summary__checkout {
+    font-size: 0.9em;
+  }
+  .summary__shop {
+    font-size: 0.9em;
+  }
+}
+
+@media all and (max-width: 1000px) {
+  .content {
+    margin-left: 80px;
+    margin-right: 80px;
+  }
+  .left__content {
+    margin-right: 60px;
+  }
+  .summary__title {
+    font-size: 1em;
+  }
+  .summary__description {
+    font-size: 0.8em;
+  }
+  .summary__total {
+    font-size: 1em;
+  }
+  .summary__checkout {
+    font-size: 0.8em;
+  }
+  .summary__shop {
+    font-size: 0.8em;
+  }
+}
+
+@media all and (max-width: 768px) {
+  .left__content {
+    margin-right: 40px;
+  }
+  .product {
+    font-size: 0.55em;
+  }
+  .product__image {
+    width: 120px;
+  }
+  .summary {
+    width: 300px;
+    height: 280px;
+  }
+  .summary__title {
+    font-size: 0.8em;
+  }
+  .summary__description {
+    font-size: 0.7em;
+  }
+  .summary__total {
+    font-size: 0.8em;
+  }
+  .summary__checkout {
+    font-size: 0.6em;
+  }
+  .summary__shop {
+    font-size: 0.7em;
+  }
+  .end {
+    font-size: 0.7em;
+  }
+}
+
+@media all and (max-width: 560px) {
+  .web__logo {
+    width: 80px;
+  }
+  .summary {
+    height: 300px;
+  }
+  .summary__title {
+    font-size: 0.8em;
+  }
+  .summary__description {
+    font-size: 0.7em;
+  }
+  .summary__total {
+    font-size: 0.8em;
+  }
+  .summary__checkout {
+    font-size: 0.7em;
+  }
+  .summary__shop {
+    font-size: 0.7em;
+  }
+  .end {
+    font-size: 0.5em;
+    padding: 16px;
+  }
+  .footer__menu {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+}
+/*# sourceMappingURL=cart-mobile.css.map */

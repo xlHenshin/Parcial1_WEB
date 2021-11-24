@@ -10,6 +10,7 @@
             font-size: 0.7em;
         }
     }
+    
 }
 
 @media all and (max-width: 1000px) {
@@ -32,24 +33,24 @@
             padding-right: 60px;
         }
 
-        &__description{
+        &__description {
             margin-left: 50px;
         }
 
-        &__name{
+        &__name {
             font-size: 1.5em;
         }
 
-        &__price{
+        &__price {
             font-size: 1em;
             margin-bottom: 20px;
         }
 
-        &__top{
+        &__top {
             margin-bottom: 25px;
         }
 
-        &__size{
+        &__size {
             font-size: 0.8em;
             margin-right: 15px;
         }
@@ -58,8 +59,8 @@
             font-size: 1em;
             margin-bottom: 15px;
         }
-    
-        &__paragraph{
+
+        &__paragraph {
             font-size: 0.8em;
         }
 
@@ -75,7 +76,6 @@
 }
 
 @media all and (max-width: 560px) {
-
     .web__logo {
         width: 80px;
     }
@@ -86,20 +86,20 @@
             padding-right: 30px;
         }
 
-        &__description{
+        &__description {
             margin-left: 25px;
         }
 
-        &__name{
+        &__name {
             font-size: 1em;
         }
 
-        &__price{
+        &__price {
             font-size: 0.8em;
             margin-bottom: 15px;
         }
 
-        &__top{
+        &__top {
             margin-bottom: 20px;
         }
 
@@ -114,8 +114,8 @@
             font-size: 0.8em;
             margin-bottom: 15px;
         }
-    
-        &__paragraph{
+
+        &__paragraph {
             font-size: 0.6em;
         }
 
@@ -136,9 +136,7 @@
 }
 
 @media all and (max-width: 375px) {
-
     .product {
-
         &__custom select {
             width: 70px;
             height: 30px;
